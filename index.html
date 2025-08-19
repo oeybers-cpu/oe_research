@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Publications | Dr. Oscar Eybers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0ff;
+            --secondary: #f0f;
+            --accent: #9d4edd;
+            --dark: #0a0a14;
+            --darker: #050508;
+            --light: #f0f0f0;
+            --card-bg: rgba(20, 20, 30, 0.7);
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--light);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+            font-family: 'Exo 2', sans-serif;
+            line-height: 1.6;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 0, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.03) 0%, transparent 30%);
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .grid-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 30px;
+            position: relative;
+            background: linear-gradient(to right, rgba(0, 255, 255, 0.1), transparent);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+            border-radius: 50%;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #aaa;
+            max-width: 800px;
+            margin: 20px auto 30px;
+            line-height: 1.7;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 600px;
+            margin: 40px auto;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+        }
+
+        .contact-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-card h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .contact-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            word-break: break-all;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary);
+            text-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .articles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(0, 255, 255, 0.4);
+        }
+
+        .article-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .article-card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            flex-grow: 1;
+            font-weight: 600;
+        }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .meta-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .new-tag {
+            background: rgba(157, 78, 221, 0.2);
+            color: var(--accent);
+            border-color: rgba(157, 78, 221, 0.3);
+        }
+
+        .article-journal {
+            color: #bbb;
+            font-style: italic;
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .article-date {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .article-link {
+            display: inline-block;
+            color: var(--light);
+            background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(157, 78, 221, 0.2));
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            text-align: center;
+            width: 100%;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .article-link:hover {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            color: var(--darker);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .article-link:hover::before {
+            left: 100%;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 50px 0 30px;
+            color: #777;
+            font-size: 1rem;
+            border-top: 1px solid rgba(0, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .university-logo {
+            width: 180px;
+            margin: 20px auto;
+            filter: brightness(0.8);
+            opacity: 0.7;
+        }
+
+        @media (max-width: 1100px) {
+            .articles-container {
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            }
+        }
+
+        @media (max-width: 900px) {
+            .articles-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-card a {
+                font-size: 1.1rem;
+            }
+            
+            .article-card {
+                padding: 25px 20px;
+            }
+            
+            .article-card h3 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-lines"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Research Publications</h1>
+            <p class="subtitle">Explore the academic contributions of Dr. Oscar Eybers in the fields of academic literacy, decoloniality, and higher education transformation.</p>
+            
+            <div class="contact-card">
+                <h2><i class="fas fa-envelope"></i> Contact Information</h2>
+                <a href="mailto:oscar.eybers@up.ac.za">oscar.eybers@up.ac.za</a>
+            </div>
+        </header>
+
+        <div class="articles-container">
+            <!-- Article 1 -->
+            <div class="article-card">
+                <h3>Decolonizing Academic Literacy with ተዋሕዶ/Tewahedo and Multiliteracies in Higher Education</h3>
+                <div class="article-meta">
+                    <span class="meta-tag new-tag">New</span>
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Genealogy</p>
+                <p class="article-date">April 2025</p>
+                <a href="https://www.researchgate.net/publication/391271730_Decolonizing_Academic_Literacy_with_Tewahedo_and_Multiliteracies_in_Higher_Education" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 2 -->
+            <div class="article-card">
+                <h3>Transforming Academic Literacy: Centering Indigenous Identities in the Classroom</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Genealogy</p>
+                <p class="article-date">February 2025</p>
+                <a href="https://www.researchgate.net/publication/388951586_Transforming_Academic_Literacy_Centering_Indigenous_Identities_in_the_Classroom" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="article-card">
+                <h3>An Inclusive African Theory of Academic Literacy</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Literacies</p>
+                <p class="article-date">January 2025</p>
+                <a href="https://www.researchgate.net/publication/388081527_An_Inclusive_African_Theory_of_Academic_Literacy" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 4 -->
+            <div class="article-card">
+                <h3>Co-designing and implementing transdisciplinary academic literacy in higher education</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Journal for Educators Teachers and Trainers</p>
+                <p class="article-date">January 2025</p>
+                <a href="https://www.researchgate.net/publication/388081394_Co-designing_and_implementing_transdisciplinary_academic_literacy_in_higher_education" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 5 -->
+            <div class="article-card">
+                <h3>Afrofuturistic Translanguaging: Pathways to Students' Wellbeing in Disciplines</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-date">December 2023</p>
+                <a href="https://www.researchgate.net/publication/376953464_Afrofuturistic_Translanguaging_Pathways_to_Students'_Wellbeing_in_Disciplines" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 6 -->
+            <div class="article-card">
+                <h3>Afrocentricity and Decoloniality in Disciplinarity: A Reflective Dialogue on Academic Literacy Development</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Critical Studies in Teaching and Learning</p>
+                <p class="article-date">December 2023</p>
+                <a href="https://www.researchgate.net/publication/376687221_Afrocentricity_and_Decoloniality_in_Disciplinarity_A_Reflective_Dialogue_on_Academic_Literacy_Development" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 7 -->
+            <div class="article-card">
+                <h3>Left, Right then Left Again: Educators at the Intersection of Global Citizenship Education, Technology and Academic Literacies</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Journal of Creative Communications</p>
+                <p class="article-date">October 2023</p>
+                <a href="https://www.researchgate.net/publication/374738276_Left_Right_then_Left_Again_Educators_at_the_Intersection_of_Global_Citizenship_Education_Technology_and_Academic_Literacies" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 8 -->
+            <div class="article-card">
+                <h3>"You Are Essentially Just a Number": Discourse Elaboration and Devaluation among Natural Science Students</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Education Research International</p>
+                <p class="article-date">May 2023</p>
+                <a href="https://www.researchgate.net/publication/370837479_You_Are_Essentially_Just_a_Number_Discourse_Elaboration_and_Devaluation_among_Natural_Science_Students" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 9 -->
+            <div class="article-card">
+                <h3>Can Academic Writing Transform Epistemicide to Emancipation?</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Educational Leadership and Management</p>
+                <p class="article-date">November 2022</p>
+                <a href="https://www.researchgate.net/publication/365663789_Can_Academic_Writing_Transform_Epistemicide_to_Emancipation" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 10 -->
+            <div class="article-card">
+                <h3>Coloniality as ontological appropriation: Insights from South Africa and Ethiopia</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Journal of Black Studies</p>
+                <p class="article-date">November 2022</p>
+                <a href="https://www.researchgate.net/publication/365275704_Coloniality_as_ontological_appropriation_Insights_from_South_Africa_and_Ethiopia" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 11 -->
+            <div class="article-card">
+                <h3>Sociocultural theory for academic literacy research involving argumentation in institutions of higher learning</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">South African Journal of Higher Education</p>
+                <p class="article-date">May 2022</p>
+                <a href="https://www.researchgate.net/publication/360784180_Sociocultural_theory_for_academic_literacy_research_involving_argumentation_in_institutions_of_higher_learning" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 12 -->
+            <div class="article-card">
+                <h3>Discourse as a Generator of Epistemic Relativism in Scientific Argumentation</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Literacies</p>
+                <p class="article-date">September 2021</p>
+                <a href="https://www.researchgate.net/publication/354661580_Discourse_as_a_Generator_of_Epistemic_Relativism_in_Scientific_Argumentation" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 13 -->
+            <div class="article-card">
+                <h3>Embedding Ubuntu Principles into Dialectic Argumentation and Academic Writing</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Alternation Interdisciplinary Journal for the Study of the Arts and Humanities in Southern Africa</p>
+                <p class="article-date">April 2021</p>
+                <a href="https://www.researchgate.net/publication/350870059_Embedding_Ubuntu_Principles_into_Dialectic_Argumentation_and_Academic_Writing" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 14 -->
+            <div class="article-card">
+                <h3>Social Realist Ontology for Analysing BRICS Educational Governance: A Higher Education Perspective</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Space and Culture</p>
+                <p class="article-date">May 2020</p>
+                <a href="https://www.researchgate.net/publication/341255075_Social_Realist_Ontology_for_Analysing_BRICS_Educational_Governance_A_Higher_Education_Perspective" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 15 -->
+            <div class="article-card">
+                <h3>Intersections of Decolonial and Global Citizenship Principles in Academic Literacy Curricula</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">The International Journal of Diversity in Education</p>
+                <p class="article-date">April 2020</p>
+                <a href="https://www.researchgate.net/publication/340681270_Intersections_of_Decolonial_and_Global_Citizenship_Principles_in_Academic_Literacy_Curricula" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 16 -->
+            <div class="article-card">
+                <h3>Leaps into Cyberspace: A Case Study for Scaffolding Argumentation in a Hybridized Academic Literacy Module</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Learning in Higher Education</p>
+                <p class="article-date">January 2020</p>
+                <a href="https://www.researchgate.net/publication/342799152_Leaps_into_Cyberspace_A_Case_Study_for_Scaffolding_Argumentation_in_a_Hybridized_Academic_Literacy_Module" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 17 -->
+            <div class="article-card">
+                <h3>Rethinking the Teaching of Academic Literacy in the Context of Calls for Curriculum Decolonization in South Africa</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Pedagogy and Curriculum</p>
+                <p class="article-date">September 2019</p>
+                <a href="https://www.researchgate.net/publication/335881665_Rethinking_the_Teaching_of_Academic_Literacy_in_the_Context_of_Calls_for_Curriculum_Decolonization_in_South_Africa" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 18 -->
+            <div class="article-card">
+                <h3>A social realist ontology for developing Afrocentric curricula in Africa</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-date">July 2019</p>
+                <a href="https://www.researchgate.net/publication/334327978_A_social_realist_ontology_for_developing_Afrocentric_curricula_in_Africa" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 19 -->
+            <div class="article-card">
+                <h3>Applying Ayittey's Indigenous African Institutions to generate epistemic plurality in the curriculum</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Transformation in Higher Education</p>
+                <p class="article-date">June 2019</p>
+                <a href="https://www.researchgate.net/publication/333981459_Applying_Ayittey's_Indigenous_African_Institutions_to_generate_epistemic_plurality_in_the_curriculum" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 20 -->
+            <div class="article-card">
+                <h3>Friends or foes? A theoretical approach towards constructivism, realism and students' wellbeing via academic literacy practices</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">South African Journal of Education</p>
+                <p class="article-date">December 2018</p>
+                <a href="https://www.researchgate.net/publication/329365508_Friends_or_foes_A_theoretical_approach_towards_constructivism_realism_and_students'_wellbeing_via_academic_literacy_practices" class="article-link">Access Publication</a>
+            </div>
+            
+            <!-- Article 21 -->
+            <div class="article-card">
+                <h3>From mechanist to critical realist interrogations of academic literacy facilitation in extended degree curricula</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">South African Journal of Higher Education</p>
+                <p class="article-date">January 2016</p>
+                <a href="https://www.researchgate.net/publication/319889643_From_mechanist_to_critical_realist_interrogations_of_academic_literacy_facilitation_in_extended_degree_curricula" class="article-link">Access Publication</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="university-logo">
+                <svg viewBox="0 0 100 30" fill="#9d4edd">
+                    <path d="M10,15 Q20,5 30,15 T50,15 T70,15 T90,15" stroke="#0ff" stroke-width="2" fill="none"/>
+                    <circle cx="50" cy="15" r="5" fill="#0ff"/>
+                    <text x="50" y="25" text-anchor="middle" fill="#aaa" font-size="8">UNIVERSITY OF PRETORIA</text>
+                </svg>
+            </div>
+            <p>© 2025 Dr. Oscar Eybers | Academic Publications Portal</p>
+            <p>Department of Education Innovation | Faculty of Education</p>
+        </div>
+    </div>
+
+    <script>
+        // Add subtle animation to article cards on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.article-card');
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+            
+            // Add pulse animation to contact card
+            const contactCard = document.querySelector('.contact-card');
+            setInterval(() => {
+                contactCard.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.3)';
+                setTimeout(() => {
+                    contactCard.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.1)';
+                }, 1000);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
