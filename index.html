@@ -71,17 +71,17 @@
 
         header {
             text-align: center;
-            padding: 60px 0 30px;
+            padding: 40px 0 20px; /* Reduced padding to make header narrower */
             position: relative;
             background: linear-gradient(to right, rgba(0, 255, 255, 0.1), transparent);
             border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-            margin-bottom: 40px;
+            margin-bottom: 30px; /* Reduced margin */
             border-radius: 0 0 20px 20px;
         }
 
         h1 {
-            font-size: 4rem;
-            margin-bottom: 15px;
+            font-size: 3.2rem; /* Slightly smaller font size */
+            margin-bottom: 10px; /* Reduced margin */
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
@@ -98,29 +98,29 @@
         h1::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px; /* Adjusted position */
             left: 10%;
             width: 80%;
-            height: 3px;
+            height: 2px; /* Thinner line */
             background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
             border-radius: 50%;
         }
 
         .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.1rem; /* Slightly smaller font size */
             color: #aaa;
             max-width: 800px;
-            margin: 20px auto 30px;
-            line-height: 1.7;
+            margin: 15px auto 20px; /* Reduced margins */
+            line-height: 1.6;
         }
 
         .contact-card {
             background: var(--card-bg);
             border: 1px solid rgba(0, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 25px;
+            padding: 20px; /* Reduced padding */
             max-width: 600px;
-            margin: 40px auto;
+            margin: 30px auto; /* Reduced margin */
             backdrop-filter: blur(10px);
             box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
             transition: all 0.4s ease;
@@ -152,8 +152,8 @@
 
         .contact-card h2 {
             color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
+            margin-bottom: 15px; /* Reduced margin */
+            font-size: 1.6rem; /* Slightly smaller font size */
             display: flex;
             align-items: center;
             gap: 15px;
@@ -163,7 +163,7 @@
         .contact-card a {
             color: var(--primary);
             text-decoration: none;
-            font-size: 1.3rem;
+            font-size: 1.1rem; /* Slightly smaller font size */
             transition: all 0.3s ease;
             word-break: break-all;
             display: inline-block;
@@ -181,14 +181,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
             gap: 30px;
-            margin: 50px 0;
+            margin: 40px 0; /* Reduced margin */
         }
 
         .article-card {
             background: var(--card-bg);
             border: 1px solid rgba(0, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 30px;
+            padding: 25px; /* Slightly reduced padding */
             transition: all 0.4s ease;
             backdrop-filter: blur(5px);
             position: relative;
@@ -223,8 +223,8 @@
 
         .article-card h3 {
             color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 20px;
+            font-size: 1.3rem; /* Slightly smaller font size */
+            margin-bottom: 15px; /* Reduced margin */
             line-height: 1.4;
             flex-grow: 1;
             font-weight: 600;
@@ -234,13 +234,13 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin: 15px 0;
+            margin: 12px 0; /* Reduced margin */
         }
 
         .meta-tag {
             background: rgba(0, 255, 255, 0.1);
             color: var(--primary);
-            padding: 6px 14px;
+            padding: 5px 12px; /* Slightly adjusted padding */
             border-radius: 20px;
             font-size: 0.85rem;
             border: 1px solid rgba(0, 255, 255, 0.2);
@@ -255,22 +255,22 @@
         .article-journal {
             color: #bbb;
             font-style: italic;
-            margin: 10px 0;
-            font-size: 1.1rem;
+            margin: 8px 0; /* Reduced margin */
+            font-size: 1rem; /* Slightly smaller font size */
         }
 
         .article-date {
             color: var(--accent);
             font-weight: 600;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
+            margin-bottom: 15px; /* Reduced margin */
+            font-size: 1rem; /* Slightly smaller font size */
         }
 
         .article-link {
             display: inline-block;
             color: var(--light);
             background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(157, 78, 221, 0.2));
-            padding: 12px 25px;
+            padding: 10px 20px; /* Slightly reduced padding */
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
@@ -308,22 +308,149 @@
 
         .footer {
             text-align: center;
-            padding: 50px 0 30px;
+            padding: 40px 0 20px; /* Reduced padding */
             color: #777;
-            font-size: 1rem;
+            font-size: 0.9rem; /* Slightly smaller font size */
             border-top: 1px solid rgba(0, 255, 255, 0.1);
-            margin-top: 40px;
+            margin-top: 30px; /* Reduced margin */
         }
 
         .footer p {
-            margin: 10px 0;
+            margin: 8px 0; /* Reduced margin */
         }
 
         .university-logo {
-            width: 180px;
-            margin: 20px auto;
+            width: 160px; /* Slightly smaller */
+            margin: 15px auto; /* Reduced margin */
             filter: brightness(0.8);
             opacity: 0.7;
+        }
+
+        /* Floating Contact Form Styles */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .contact-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--darker);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .contact-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.6);
+        }
+
+        .contact-form-container {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 350px;
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .contact-form-container.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .contact-form-container h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: rgba(10, 10, 20, 0.7);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 5px;
+            color: var(--light);
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            color: var(--darker);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .form-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .form-message.success {
+            background: rgba(0, 255, 0, 0.1);
+            color: #0f0;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            display: block;
+        }
+
+        .form-message.error {
+            background: rgba(255, 0, 0, 0.1);
+            color: #f00;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            display: block;
         }
 
         @media (max-width: 1100px) {
@@ -338,11 +465,11 @@
             }
             
             h1 {
-                font-size: 3rem;
+                font-size: 2.8rem; /* Adjusted for smaller screens */
             }
             
             .subtitle {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
         }
 
@@ -352,15 +479,32 @@
             }
             
             .contact-card a {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .article-card {
-                padding: 25px 20px;
+                padding: 20px 15px;
             }
             
             .article-card h3 {
-                font-size: 1.25rem;
+                font-size: 1.2rem;
+            }
+            
+            .floating-contact {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .contact-form-container {
+                width: 300px;
+                right: -20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .contact-form-container {
+                width: 280px;
+                right: -40px;
             }
         }
     </style>
@@ -624,6 +768,32 @@
         </div>
     </div>
 
+    <!-- Floating Contact Form -->
+    <div class="floating-contact">
+        <button class="contact-toggle" id="contactToggle">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <div class="contact-form-container" id="contactForm">
+            <h3>Contact Dr. Eybers</h3>
+            <form id="emailForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="form-message" id="formMessage"></div>
+        </div>
+    </div>
+
     <script>
         // Add subtle animation to article cards on page load
         document.addEventListener('DOMContentLoaded', function() {
@@ -648,6 +818,70 @@
                     contactCard.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.1)';
                 }, 1000);
             }, 3000);
+            
+            // Contact form functionality
+            const contactToggle = document.getElementById('contactToggle');
+            const contactForm = document.getElementById('contactForm');
+            const emailForm = document.getElementById('emailForm');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Toggle contact form visibility
+            contactToggle.addEventListener('click', function() {
+                contactForm.classList.toggle('visible');
+            });
+            
+            // Handle form submission
+            emailForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // Simple validation
+                if (!name || !email || !message) {
+                    showMessage('Please fill in all fields.', 'error');
+                    return;
+                }
+                
+                // Email validation
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    showMessage('Please enter a valid email address.', 'error');
+                    return;
+                }
+                
+                // Simulate form submission (in a real scenario, you would use a server-side script)
+                // For demonstration purposes, we'll just show a success message
+                showMessage('Thank you for your message. I will get back to you soon!', 'success');
+                
+                // Reset form
+                emailForm.reset();
+                
+                // Hide form after successful submission
+                setTimeout(() => {
+                    contactForm.classList.remove('visible');
+                    formMessage.classList.remove('success');
+                    formMessage.style.display = 'none';
+                }, 3000);
+            });
+            
+            // Function to show message
+            function showMessage(text, type) {
+                formMessage.textContent = text;
+                formMessage.className = 'form-message ' + type;
+                formMessage.style.display = 'block';
+            }
+            
+            // Close form when clicking outside
+            document.addEventListener('click', function(e) {
+                if (contactForm.classList.contains('visible') && 
+                    !contactForm.contains(e.target) && 
+                    e.target !== contactToggle) {
+                    contactForm.classList.remove('visible');
+                }
+            });
         });
     </script>
 </body>
