@@ -71,24 +71,24 @@
 
         header {
             text-align: center;
-            padding: 40px 0 20px; /* Reduced padding to make header narrower */
+            padding: 30px 0 15px; /* Reduced by 25% */
             position: relative;
             background: linear-gradient(to right, rgba(0, 255, 255, 0.1), transparent);
             border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-            margin-bottom: 30px; /* Reduced margin */
-            border-radius: 0 0 20px 20px;
+            margin-bottom: 22.5px; /* Reduced by 25% */
+            border-radius: 0 0 15px 15px; /* Reduced by 25% */
         }
 
         h1 {
-            font-size: 3.2rem; /* Slightly smaller font size */
-            margin-bottom: 10px; /* Reduced margin */
+            font-size: 2.4rem; /* Reduced by 25% */
+            margin-bottom: 7.5px; /* Reduced by 25% */
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            letter-spacing: 2.25px; /* Reduced by 25% */
+            text-shadow: 0 0 11.25px rgba(0, 255, 255, 0.5); /* Reduced by 25% */
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             position: relative;
@@ -98,31 +98,31 @@
         h1::after {
             content: '';
             position: absolute;
-            bottom: -8px; /* Adjusted position */
+            bottom: -6px; /* Reduced by 25% */
             left: 10%;
             width: 80%;
-            height: 2px; /* Thinner line */
+            height: 1.5px; /* Reduced by 25% */
             background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
             border-radius: 50%;
         }
 
         .subtitle {
-            font-size: 1.1rem; /* Slightly smaller font size */
+            font-size: 0.825rem; /* Reduced by 25% */
             color: #aaa;
             max-width: 800px;
-            margin: 15px auto 20px; /* Reduced margins */
+            margin: 11.25px auto 15px; /* Reduced by 25% */
             line-height: 1.6;
         }
 
         .contact-card {
             background: var(--card-bg);
             border: 1px solid rgba(0, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px; /* Reduced padding */
+            border-radius: 11.25px; /* Reduced by 25% */
+            padding: 15px; /* Reduced by 25% */
             max-width: 600px;
-            margin: 30px auto; /* Reduced margin */
+            margin: 22.5px auto; /* Reduced by 25% */
             backdrop-filter: blur(10px);
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 22.5px rgba(0, 255, 255, 0.1); /* Reduced by 25% */
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -134,7 +134,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
+            height: 3px; /* Reduced by 25% */
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             transform: scaleX(0);
             transform-origin: left;
@@ -142,8 +142,8 @@
         }
 
         .contact-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+            transform: translateY(-6px); /* Reduced by 25% */
+            box-shadow: 0 7.5px 30px rgba(0, 255, 255, 0.3); /* Reduced by 25% */
         }
 
         .contact-card:hover::before {
@@ -152,28 +152,28 @@
 
         .contact-card h2 {
             color: var(--primary);
-            margin-bottom: 15px; /* Reduced margin */
-            font-size: 1.6rem; /* Slightly smaller font size */
+            margin-bottom: 11.25px; /* Reduced by 25% */
+            font-size: 1.2rem; /* Reduced by 25% */
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 11.25px; /* Reduced by 25% */
             font-family: 'Orbitron', sans-serif;
         }
 
         .contact-card a {
             color: var(--primary);
             text-decoration: none;
-            font-size: 1.1rem; /* Slightly smaller font size */
+            font-size: 0.825rem; /* Reduced by 25% */
             transition: all 0.3s ease;
             word-break: break-all;
             display: inline-block;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 3.75px 7.5px; /* Reduced by 25% */
+            border-radius: 3.75px; /* Reduced by 25% */
         }
 
         .contact-card a:hover {
             color: var(--secondary);
-            text-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+            text-shadow: 0 0 11.25px rgba(255, 0, 255, 0.7); /* Reduced by 25% */
             background: rgba(255, 255, 255, 0.1);
         }
 
@@ -181,14 +181,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
             gap: 30px;
-            margin: 40px 0; /* Reduced margin */
+            margin: 30px 0; /* Reduced by 25% */
         }
 
         .article-card {
             background: var(--card-bg);
             border: 1px solid rgba(0, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 25px; /* Slightly reduced padding */
+            border-radius: 11.25px; /* Reduced by 25% */
+            padding: 18.75px; /* Reduced by 25% */
             transition: all 0.4s ease;
             backdrop-filter: blur(5px);
             position: relative;
@@ -204,7 +204,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
+            height: 3px; /* Reduced by 25% */
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             transform: scaleX(0);
             transform-origin: left;
@@ -212,8 +212,8 @@
         }
 
         .article-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            transform: translateY(-7.5px); /* Reduced by 25% */
+            box-shadow: 0 11.25px 30px rgba(0, 0, 0, 0.4); /* Reduced by 25% */
             border-color: rgba(0, 255, 255, 0.4);
         }
 
@@ -223,8 +223,8 @@
 
         .article-card h3 {
             color: var(--primary);
-            font-size: 1.3rem; /* Slightly smaller font size */
-            margin-bottom: 15px; /* Reduced margin */
+            font-size: 0.975rem; /* Reduced by 25% */
+            margin-bottom: 11.25px; /* Reduced by 25% */
             line-height: 1.4;
             flex-grow: 1;
             font-weight: 600;
@@ -234,15 +234,15 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin: 12px 0; /* Reduced margin */
+            margin: 9px 0; /* Reduced by 25% */
         }
 
         .meta-tag {
             background: rgba(0, 255, 255, 0.1);
             color: var(--primary);
-            padding: 5px 12px; /* Slightly adjusted padding */
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 3.75px 9px; /* Reduced by 25% */
+            border-radius: 15px; /* Reduced by 25% */
+            font-size: 0.6375rem; /* Reduced by 25% */
             border: 1px solid rgba(0, 255, 255, 0.2);
         }
 
@@ -255,23 +255,23 @@
         .article-journal {
             color: #bbb;
             font-style: italic;
-            margin: 8px 0; /* Reduced margin */
-            font-size: 1rem; /* Slightly smaller font size */
+            margin: 6px 0; /* Reduced by 25% */
+            font-size: 0.75rem; /* Reduced by 25% */
         }
 
         .article-date {
             color: var(--accent);
             font-weight: 600;
-            margin-bottom: 15px; /* Reduced margin */
-            font-size: 1rem; /* Slightly smaller font size */
+            margin-bottom: 11.25px; /* Reduced by 25% */
+            font-size: 0.75rem; /* Reduced by 25% */
         }
 
         .article-link {
             display: inline-block;
             color: var(--light);
             background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(157, 78, 221, 0.2));
-            padding: 10px 20px; /* Slightly reduced padding */
-            border-radius: 8px;
+            padding: 7.5px 15px; /* Reduced by 25% */
+            border-radius: 6px; /* Reduced by 25% */
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -279,7 +279,7 @@
             text-align: center;
             width: 100%;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1px;
+            letter-spacing: 0.75px; /* Reduced by 25% */
             position: relative;
             overflow: hidden;
         }
@@ -298,8 +298,8 @@
         .article-link:hover {
             background: linear-gradient(90deg, var(--primary), var(--accent));
             color: var(--darker);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Reduced by 25% */
+            transform: translateY(-2.25px); /* Reduced by 25% */
         }
 
         .article-link:hover::before {
@@ -308,22 +308,41 @@
 
         .footer {
             text-align: center;
-            padding: 40px 0 20px; /* Reduced padding */
+            padding: 30px 0 15px; /* Reduced by 25% */
             color: #777;
-            font-size: 0.9rem; /* Slightly smaller font size */
+            font-size: 0.675rem; /* Reduced by 25% */
             border-top: 1px solid rgba(0, 255, 255, 0.1);
-            margin-top: 30px; /* Reduced margin */
+            margin-top: 22.5px; /* Reduced by 25% */
         }
 
         .footer p {
-            margin: 8px 0; /* Reduced margin */
+            margin: 6px 0; /* Reduced by 25% */
         }
 
         .university-logo {
-            width: 160px; /* Slightly smaller */
-            margin: 15px auto; /* Reduced margin */
+            width: 120px; /* Reduced by 25% */
+            margin: 11.25px auto; /* Reduced by 25% */
             filter: brightness(0.8);
             opacity: 0.7;
+        }
+
+        .footer-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .footer-link:hover {
+            color: var(--secondary);
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 0, 255, 0.3);
         }
 
         /* Floating Contact Form Styles */
@@ -465,29 +484,29 @@
             }
             
             h1 {
-                font-size: 2.8rem; /* Adjusted for smaller screens */
+                font-size: 2.1rem; /* Adjusted for smaller screens */
             }
             
             .subtitle {
-                font-size: 1rem;
+                font-size: 0.75rem;
             }
         }
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 2.2rem;
+                font-size: 1.65rem;
             }
             
             .contact-card a {
-                font-size: 1rem;
+                font-size: 0.75rem;
             }
             
             .article-card {
-                padding: 20px 15px;
+                padding: 15px 11.25px;
             }
             
             .article-card h3 {
-                font-size: 1.2rem;
+                font-size: 0.9rem;
             }
             
             .floating-contact {
@@ -765,6 +784,7 @@
             </div>
             <p>© 2025 Dr. Oscar Eybers | Journal Article Portal</p>
             <p>Unit for Academic Literacy | University of Pretoria</p>
+            <a href="https://oeybers-cpu.github.io/a_lit_models/" class="footer-link" target="_blank">Additional Literacy Models</a>
         </div>
     </div>
 
@@ -886,3 +906,4 @@
     </script>
 </body>
 </html>
+           
