@@ -80,33 +80,65 @@
             border-radius: 0 0 15px 15px; /* Reduced by 25% */
         }
 
-        /* --- New Style for the Link --- */
+        /* --- Updated Style for the Link --- */
         .eybers-chapters-link {
-            display: block;
+            display: inline-block; /* Changed from block to inline-block */
             text-align: center;
-            margin: 10px auto 20px; /* Add some top/bottom margin */
-            padding: 8px 16px;
-            max-width: fit-content;
-            background: rgba(0, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            border-radius: 20px; /* Rounded pill shape */
-            color: var(--primary); /* Cyan text */
+            margin: 10px auto 20px; /* Keep vertical margins */
+            padding: 12px 25px; /* Increased padding */
+            background: linear-gradient(135deg, var(--primary), var(--secondary)); /* Gradient background */
+            border: 2px solid var(--light); /* Solid border */
+            border-radius: 30px; /* More rounded */
+            color: var(--darker); /* Dark text for contrast */
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
-            font-weight: 600;
-            font-size: 0.9rem; /* Slightly smaller than h1 */
+            font-weight: 700; /* Bolder text */
+            font-size: 1.1rem; /* Larger text */
             transition: all 0.3s ease;
-            box-shadow: 0 0 5px rgba(0, 255, 255, 0.2); /* Subtle glow */
+            box-shadow: 
+                0 0 15px var(--primary), /* Glowing effect */
+                0 0 25px var(--secondary),
+                inset 0 0 10px rgba(255, 255, 255, 0.5); /* Inner glow */
+            position: relative;
+            overflow: hidden;
+            z-index: 1; /* Ensure it's above the pseudo-element */
+        }
+
+        /* Create a pseudo-element for a more intense animated glow */
+        .eybers-chapters-link::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,255,255,0.8) 0%, rgba(157,78,221,0.8) 40%, rgba(255,0,255,0.8) 100%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.5s ease, transform 1s ease;
+            animation: rotateGlow 4s linear infinite; /* Add animation */
+        }
+
+        /* Animation for the pseudo-element */
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .eybers-chapters-link:hover {
-            background: rgba(0, 255, 255, 0.2);
-            color: var(--light); /* Light text on hover */
-            border-color: var(--primary);
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Stronger glow on hover */
-            transform: translateY(-2px); /* Slight lift on hover */
+            transform: scale(1.05) translateY(-3px); /* Scale up and lift slightly */
+            box-shadow: 
+                0 0 25px var(--primary), /* Intensify glow on hover */
+                0 0 40px var(--secondary),
+                inset 0 0 15px rgba(255, 255, 255, 0.8);
+            color: var(--darker); /* Ensure text color stays dark */
         }
-        /* --- End of New Style --- */
+
+        /* Trigger the pseudo-element glow on hover */
+        .eybers-chapters-link:hover::before {
+            opacity: 0.7; /* Make the pseudo-element visible */
+        }
+        /* --- End of Updated Style --- */
 
 
         h1 {
@@ -568,9 +600,9 @@
             <h1>Research Publications</h1>
             <p class="subtitle">Explore the academic contributions of Dr. Oscar Eybers in the fields of academic literacy, decoloniality, and higher education transformation.</p>
             
-            <!-- --- Added Link --- -->
+            <!-- --- Updated Link --- -->
             <a href="https://oeybers-cpu.github.io/chapters/" class="eybers-chapters-link">Visit Eybers Chapters</a>
-            <!-- --- End of Added Link --- -->
+            <!-- --- End of Updated Link --- -->
 
             <div class="contact-card">
                 <h2><i class="fas fa-envelope"></i> Contact Information</h2>
