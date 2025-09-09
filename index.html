@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Publications | Dr. Oscar Eybers</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -28,7 +28,7 @@
             background: linear-gradient(135deg, var(--darker), var(--dark));
             color: var(--light);
             min-height: 100vh;
-            padding: 20px;
+            padding: 15px; /* Slightly reduced default padding */
             position: relative;
             overflow-x: hidden;
             font-family: 'Exo 2', sans-serif;
@@ -72,44 +72,44 @@
 
         header {
             text-align: center;
-            padding: 30px 0 15px; /* Reduced by 25% */
+            padding: 25px 0 12px; /* Adjusted padding */
             position: relative;
             background: linear-gradient(to right, rgba(0, 255, 255, 0.1), transparent);
             border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-            margin-bottom: 22.5px; /* Reduced by 25% */
-            border-radius: 0 0 15px 15px; /* Reduced by 25% */
+            margin-bottom: 20px; /* Adjusted margin */
+            border-radius: 0 0 12px 12px; /* Adjusted radius */
         }
 
         /* --- Header Home Link Style --- */
         .header-home-link {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 15px; /* Adjusted for smaller screens */
+            left: 15px; /* Adjusted for smaller screens */
             display: inline-block;
             text-align: center;
-            padding: 8px 16px; /* Slightly smaller padding */
+            padding: 7px 14px; /* Slightly reduced padding */
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             border: 1px solid var(--light);
-            border-radius: 20px; /* Rounded pill shape */
+            border-radius: 20px;
             color: var(--darker);
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
-            font-size: 0.9rem; /* Smaller text */
+            font-size: 0.85rem; /* Slightly smaller text */
             transition: all 0.3s ease;
             box-shadow:
-                0 0 8px var(--primary),
-                0 0 15px var(--secondary),
-                inset 0 0 5px rgba(255, 255, 255, 0.5);
+                0 0 7px var(--primary),
+                0 0 13px var(--secondary),
+                inset 0 0 4px rgba(255, 255, 255, 0.5);
             z-index: 10;
         }
 
         .header-home-link:hover {
-            transform: scale(1.05) translateY(-2px);
+            transform: scale(1.03) translateY(-1.5px); /* Slightly reduced effect */
             box-shadow:
-                0 0 15px var(--primary),
-                0 0 25px var(--secondary),
-                inset 0 0 10px rgba(255, 255, 255, 0.8);
+                0 0 12px var(--primary),
+                0 0 20px var(--secondary),
+                inset 0 0 8px rgba(255, 255, 255, 0.8);
             color: var(--darker);
         }
         /* --- End of Header Home Link Style --- */
@@ -117,29 +117,28 @@
 
         /* --- Updated Style for the Chapters Link --- */
         .eybers-chapters-link {
-            display: inline-block; /* Changed from block to inline-block */
+            display: inline-block;
             text-align: center;
-            margin: 10px auto 20px; /* Keep vertical margins */
-            padding: 12px 25px; /* Increased padding */
-            background: linear-gradient(135deg, var(--primary), var(--secondary)); /* Gradient background */
-            border: 2px solid var(--light); /* Solid border */
-            border-radius: 30px; /* More rounded */
-            color: var(--darker); /* Dark text for contrast */
+            margin: 8px auto 16px; /* Adjusted margins */
+            padding: 10px 20px; /* Adjusted padding */
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: 2px solid var(--light);
+            border-radius: 25px; /* Adjusted radius */
+            color: var(--darker);
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
-            font-weight: 700; /* Bolder text */
-            font-size: 1.1rem; /* Larger text */
+            font-weight: 700;
+            font-size: 1rem; /* Adjusted font size */
             transition: all 0.3s ease;
             box-shadow: 
-                0 0 15px var(--primary), /* Glowing effect */
-                0 0 25px var(--secondary),
-                inset 0 0 10px rgba(255, 255, 255, 0.5); /* Inner glow */
+                0 0 12px var(--primary),
+                0 0 20px var(--secondary),
+                inset 0 0 8px rgba(255, 255, 255, 0.5);
             position: relative;
             overflow: hidden;
-            z-index: 1; /* Ensure it's above the pseudo-element */
+            z-index: 1;
         }
 
-        /* Create a pseudo-element for a more intense animated glow */
         .eybers-chapters-link::before {
             content: '';
             position: absolute;
@@ -147,45 +146,43 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(0,255,255,0.8) 0%, rgba(157,78,221,0.8) 40%, rgba(255,0,255,0.8) 100%);
+            background: radial-gradient(circle, rgba(0,255,255,0.7) 0%, rgba(157,78,221,0.7) 40%, rgba(255,0,255,0.7) 100%);
             opacity: 0;
             z-index: -1;
             transition: opacity 0.5s ease, transform 1s ease;
-            animation: rotateGlow 4s linear infinite; /* Add animation */
+            animation: rotateGlow 4s linear infinite;
         }
 
-        /* Animation for the pseudo-element */
         @keyframes rotateGlow {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
         .eybers-chapters-link:hover {
-            transform: scale(1.05) translateY(-3px); /* Scale up and lift slightly */
+            transform: scale(1.03) translateY(-2px); /* Slightly reduced effect */
             box-shadow: 
-                0 0 25px var(--primary), /* Intensify glow on hover */
-                0 0 40px var(--secondary),
-                inset 0 0 15px rgba(255, 255, 255, 0.8);
-            color: var(--darker); /* Ensure text color stays dark */
+                0 0 20px var(--primary),
+                0 0 32px var(--secondary),
+                inset 0 0 12px rgba(255, 255, 255, 0.8);
+            color: var(--darker);
         }
 
-        /* Trigger the pseudo-element glow on hover */
         .eybers-chapters-link:hover::before {
-            opacity: 0.7; /* Make the pseudo-element visible */
+            opacity: 0.6; /* Slightly reduced opacity */
         }
         /* --- End of Updated Style --- */
 
 
         h1 {
-            font-size: 2.4rem; /* Reduced by 25% */
-            margin-bottom: 7.5px; /* Reduced by 25% */
+            font-size: 2rem; /* Adjusted base size */
+            margin-bottom: 6px; /* Adjusted margin */
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-transform: uppercase;
-            letter-spacing: 2.25px; /* Reduced by 25% */
-            text-shadow: 0 0 11.25px rgba(0, 255, 255, 0.5); /* Reduced by 25% */
+            letter-spacing: 1.8px; /* Adjusted spacing */
+            text-shadow: 0 0 9px rgba(0, 255, 255, 0.5);
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             position: relative;
@@ -195,31 +192,31 @@
         h1::after {
             content: '';
             position: absolute;
-            bottom: -6px; /* Reduced by 25% */
+            bottom: -5px; /* Adjusted position */
             left: 10%;
             width: 80%;
-            height: 1.5px; /* Reduced by 25% */
+            height: 1.2px; /* Adjusted height */
             background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
             border-radius: 50%;
         }
 
         .subtitle {
-            font-size: 0.825rem; /* Reduced by 25% */
+            font-size: 0.7rem; /* Adjusted base size */
             color: #aaa;
             max-width: 800px;
-            margin: 11.25px auto 15px; /* Reduced by 25% */
-            line-height: 1.6;
+            margin: 9px auto 12px; /* Adjusted margins */
+            line-height: 1.5; /* Slightly tighter line height */
         }
 
         .contact-card {
             background: var(--card-bg);
             border: 1px solid rgba(0, 255, 255, 0.1);
-            border-radius: 11.25px; /* Reduced by 25% */
-            padding: 15px; /* Reduced by 25% */
-            max-width: 600px;
-            margin: 22.5px auto; /* Reduced by 25% */
+            border-radius: 9px; /* Adjusted radius */
+            padding: 12px; /* Adjusted padding */
+            max-width: 95%; /* Increased max-width for smaller screens */
+            margin: 18px auto; /* Adjusted margin */
             backdrop-filter: blur(10px);
-            box-shadow: 0 0 22.5px rgba(0, 255, 255, 0.1); /* Reduced by 25% */
+            box-shadow: 0 0 18px rgba(0, 255, 255, 0.1);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -232,7 +229,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 3px; /* Reduced by 25% */
+            height: 2.4px; /* Adjusted height */
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             transform: scaleX(0);
             transform-origin: left;
@@ -240,8 +237,8 @@
         }
 
         .contact-card:hover {
-            transform: translateY(-6px); /* Reduced by 25% */
-            box-shadow: 0 7.5px 30px rgba(0, 255, 255, 0.3); /* Reduced by 25% */
+            transform: translateY(-5px); /* Adjusted effect */
+            box-shadow: 0 6px 24px rgba(0, 255, 255, 0.3);
         }
 
         .contact-card:hover::before {
@@ -250,11 +247,11 @@
 
         .contact-card h2 {
             color: var(--primary);
-            margin-bottom: 11.25px; /* Reduced by 25% */
-            font-size: 1.2rem; /* Reduced by 25% */
+            margin-bottom: 9px; /* Adjusted margin */
+            font-size: 1rem; /* Adjusted font size */
             display: flex;
             align-items: center;
-            gap: 11.25px; /* Reduced by 25% */
+            gap: 9px; /* Adjusted gap */
             font-family: 'Orbitron', sans-serif;
             justify-content: center;
         }
@@ -262,32 +259,32 @@
         .contact-card a {
             color: var(--golden-yellow);
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1rem; /* Adjusted font size */
             transition: all 0.3s ease;
-            word-break: break-all;
+            word-break: break-word; /* Changed to break-word for better wrapping */
             display: inline-block;
-            padding: 3.75px 7.5px; /* Reduced by 25% */
-            border-radius: 3.75px; /* Reduced by 25% */
+            padding: 3px 6px; /* Adjusted padding */
+            border-radius: 3px; /* Adjusted radius */
         }
 
         .contact-card a:hover {
             color: var(--golden-yellow);
-            text-shadow: 0 0 11.25px rgba(255, 215, 0, 0.7);
+            text-shadow: 0 0 9px rgba(255, 215, 0, 0.7);
             background: rgba(255, 255, 255, 0.1);
         }
 
         .articles-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-            gap: 30px;
-            margin: 30px 0; /* Reduced by 25% */
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Reduced min width for better stacking */
+            gap: 24px; /* Adjusted gap */
+            margin: 24px 0; /* Adjusted margin */
         }
 
         .article-card {
             background: var(--card-bg);
             border: 1px solid rgba(0, 255, 255, 0.1);
-            border-radius: 11.25px; /* Reduced by 25% */
-            padding: 18.75px; /* Reduced by 25% */
+            border-radius: 9px; /* Adjusted radius */
+            padding: 15px; /* Adjusted padding */
             transition: all 0.4s ease;
             backdrop-filter: blur(5px);
             position: relative;
@@ -303,7 +300,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 3px; /* Reduced by 25% */
+            height: 2.4px; /* Adjusted height */
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             transform: scaleX(0);
             transform-origin: left;
@@ -311,8 +308,8 @@
         }
 
         .article-card:hover {
-            transform: translateY(-7.5px); /* Reduced by 25% */
-            box-shadow: 0 11.25px 30px rgba(0, 0, 0, 0.4); /* Reduced by 25% */
+            transform: translateY(-6px); /* Adjusted effect */
+            box-shadow: 0 9px 24px rgba(0, 0, 0, 0.4);
             border-color: rgba(0, 255, 255, 0.4);
         }
 
@@ -322,9 +319,9 @@
 
         .article-card h3 {
             color: var(--primary);
-            font-size: 0.975rem; /* Reduced by 25% */
-            margin-bottom: 11.25px; /* Reduced by 25% */
-            line-height: 1.4;
+            font-size: 0.8rem; /* Adjusted font size */
+            margin-bottom: 9px; /* Adjusted margin */
+            line-height: 1.3; /* Slightly tighter line height */
             flex-grow: 1;
             font-weight: 600;
         }
@@ -332,16 +329,16 @@
         .article-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 9px 0; /* Reduced by 25% */
+            gap: 8px; /* Adjusted gap */
+            margin: 7px 0; /* Adjusted margin */
         }
 
         .meta-tag {
             background: rgba(0, 255, 255, 0.1);
             color: var(--primary);
-            padding: 3.75px 9px; /* Reduced by 25% */
-            border-radius: 15px; /* Reduced by 25% */
-            font-size: 0.6375rem; /* Reduced by 25% */
+            padding: 3px 7px; /* Adjusted padding */
+            border-radius: 12px; /* Adjusted radius */
+            font-size: 0.55rem; /* Adjusted font size */
             border: 1px solid rgba(0, 255, 255, 0.2);
         }
 
@@ -354,23 +351,23 @@
         .article-journal {
             color: #bbb;
             font-style: italic;
-            margin: 6px 0; /* Reduced by 25% */
-            font-size: 0.75rem; /* Reduced by 25% */
+            margin: 5px 0; /* Adjusted margin */
+            font-size: 0.65rem; /* Adjusted font size */
         }
 
         .article-date {
             color: var(--accent);
             font-weight: 600;
-            margin-bottom: 11.25px; /* Reduced by 25% */
-            font-size: 0.75rem; /* Reduced by 25% */
+            margin-bottom: 9px; /* Adjusted margin */
+            font-size: 0.65rem; /* Adjusted font size */
         }
 
         .article-link {
             display: inline-block;
             color: var(--light);
             background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(157, 78, 221, 0.2));
-            padding: 7.5px 15px; /* Reduced by 25% */
-            border-radius: 6px; /* Reduced by 25% */
+            padding: 6px 12px; /* Adjusted padding */
+            border-radius: 5px; /* Adjusted radius */
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -378,9 +375,10 @@
             text-align: center;
             width: 100%;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.75px; /* Reduced by 25% */
+            letter-spacing: 0.6px; /* Adjusted spacing */
             position: relative;
             overflow: hidden;
+            font-size: 0.75rem; /* Added font size */
         }
 
         .article-link::before {
@@ -397,8 +395,8 @@
         .article-link:hover {
             background: linear-gradient(90deg, var(--primary), var(--accent));
             color: var(--darker);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Reduced by 25% */
-            transform: translateY(-2.25px); /* Reduced by 25% */
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+            transform: translateY(-1.8px); /* Adjusted effect */
         }
 
         .article-link:hover::before {
@@ -407,40 +405,40 @@
 
         .footer {
             text-align: center;
-            padding: 30px 0 15px; /* Reduced by 25% */
+            padding: 25px 0 12px; /* Adjusted padding */
             color: #777;
-            font-size: 0.675rem; /* Reduced by 25% */
+            font-size: 0.6rem; /* Adjusted font size */
             border-top: 1px solid rgba(0, 255, 255, 0.1);
-            margin-top: 22.5px; /* Reduced by 25% */
+            margin-top: 20px; /* Adjusted margin */
         }
 
         .footer p {
-            margin: 6px 0; /* Reduced by 25% */
+            margin: 5px 0; /* Adjusted margin */
         }
 
         /* --- Updated Footer Links --- */
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between links */
-            flex-wrap: wrap; /* Wrap on small screens */
-            margin-top: 15px;
+            gap: 15px; /* Adjusted gap */
+            flex-wrap: wrap;
+            margin-top: 12px; /* Adjusted margin */
         }
 
         .footer-link, .footer-top-link, .footer-home-link {
             display: inline-block;
             color: var(--primary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.75rem; /* Adjusted font size */
             transition: all 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 4px;
+            padding: 4px 8px; /* Adjusted padding */
+            border-radius: 3px; /* Adjusted radius */
             border: 1px solid rgba(0, 255, 255, 0.2);
         }
 
         .footer-link:hover, .footer-top-link:hover, .footer-home-link:hover {
             color: var(--secondary);
-            text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+            text-shadow: 0 0 8px rgba(255, 0, 255, 0.7);
             background: rgba(255, 255, 255, 0.1);
             border-color: rgba(255, 0, 255, 0.3);
         }
@@ -450,14 +448,14 @@
         /* Floating Contact Form Styles */
         .floating-contact {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 25px; /* Adjusted position */
+            right: 25px; /* Adjusted position */
             z-index: 1000;
         }
 
         .contact-toggle {
-            width: 60px;
-            height: 60px;
+            width: 50px; /* Adjusted size */
+            height: 50px; /* Adjusted size */
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             color: var(--darker);
@@ -466,30 +464,30 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+            font-size: 20px; /* Adjusted font size */
+            box-shadow: 0 4px 16px rgba(0, 255, 255, 0.4);
             transition: all 0.3s ease;
         }
 
         .contact-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.6);
+            transform: scale(1.08); /* Adjusted effect */
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
         }
 
         .contact-form-container {
             position: absolute;
-            bottom: 70px;
+            bottom: 60px; /* Adjusted position */
             right: 0;
-            width: 350px;
+            width: 300px; /* Adjusted width */
             background: var(--card-bg);
             border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 12px; /* Adjusted radius */
+            padding: 16px; /* Adjusted padding */
             backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
             opacity: 0;
             visibility: hidden;
-            transform: translateY(20px);
+            transform: translateY(16px); /* Adjusted transform */
             transition: all 0.4s ease;
         }
 
@@ -501,62 +499,65 @@
 
         .contact-form-container h3 {
             color: var(--primary);
-            margin-bottom: 15px;
+            margin-bottom: 12px; /* Adjusted margin */
             font-family: 'Orbitron', sans-serif;
             text-align: center;
+            font-size: 1.1rem; /* Adjusted font size */
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 12px; /* Adjusted margin */
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 4px; /* Adjusted margin */
             color: #ccc;
-            font-size: 0.9rem;
+            font-size: 0.8rem; /* Adjusted font size */
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 10px;
+            padding: 8px; /* Adjusted padding */
             background: rgba(10, 10, 20, 0.7);
             border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 5px;
+            border-radius: 4px; /* Adjusted radius */
             color: var(--light);
             font-family: 'Exo 2', sans-serif;
+            font-size: 0.9rem; /* Adjusted font size */
         }
 
         .form-group textarea {
-            min-height: 100px;
+            min-height: 80px; /* Adjusted height */
             resize: vertical;
         }
 
         .submit-btn {
             width: 100%;
-            padding: 12px;
+            padding: 10px; /* Adjusted padding */
             background: linear-gradient(90deg, var(--primary), var(--accent));
             color: var(--darker);
             border: none;
-            border-radius: 5px;
+            border-radius: 4px; /* Adjusted radius */
             cursor: pointer;
             font-weight: bold;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px; /* Adjusted spacing */
             transition: all 0.3s ease;
+            font-size: 0.9rem; /* Adjusted font size */
         }
 
         .submit-btn:hover {
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
         }
 
         .form-message {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 5px;
+            margin-top: 12px; /* Adjusted margin */
+            padding: 8px; /* Adjusted padding */
+            border-radius: 4px; /* Adjusted radius */
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.8rem; /* Adjusted font size */
             display: none;
         }
 
@@ -574,9 +575,10 @@
             display: block;
         }
 
+        /* --- Existing Media Queries with Minor Adjustments --- */
         @media (max-width: 1100px) {
             .articles-container {
-                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjusted min width */
             }
         }
 
@@ -586,56 +588,96 @@
             }
          
             h1 {
-                font-size: 2.1rem; /* Adjusted for smaller screens */
+                font-size: 1.8rem; /* Adjusted for smaller screens */
             }
          
             .subtitle {
+                font-size: 0.65rem; /* Adjusted font size */
+            }
+
+            /* Adjust header home link for medium screens */
+            .header-home-link {
+                top: 12px;
+                left: 12px;
+                padding: 6px 12px;
                 font-size: 0.75rem;
             }
         }
 
         @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Reduced padding for small screens */
+            }
+
             h1 {
-                font-size: 1.65rem;
+                font-size: 1.5rem; /* Adjusted font size */
             }
          
             .contact-card a {
-                font-size: 0.75rem;
+                font-size: 0.85rem; /* Adjusted font size */
             }
          
             .article-card {
-                padding: 15px 11.25px;
+                padding: 12px 9px; /* Adjusted padding */
             }
          
             .article-card h3 {
-                font-size: 0.9rem;
+                font-size: 0.75rem; /* Adjusted font size */
             }
          
             .floating-contact {
-                bottom: 20px;
-                right: 20px;
+                bottom: 15px; /* Adjusted position */
+                right: 15px; /* Adjusted position */
             }
          
             .contact-form-container {
-                width: 300px;
-                right: -20px;
+                width: 260px; /* Adjusted width */
+                right: -10px; /* Adjusted position */
             }
 
             /* Adjust header home link for small screens */
             .header-home-link {
                 top: 10px;
                 left: 10px;
-                padding: 6px 12px;
-                font-size: 0.8rem;
+                padding: 5px 10px;
+                font-size: 0.7rem;
+            }
+
+            /* Adjust chapters link for small screens */
+            .eybers-chapters-link {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+                margin: 6px auto 12px;
+            }
+
+            .subtitle {
+                font-size: 0.6rem; /* Adjusted font size */
+            }
+
+            .footer-links {
+                gap: 10px; /* Reduced gap */
             }
         }
 
         @media (max-width: 400px) {
             .contact-form-container {
-                width: 280px;
-                right: -40px;
+                width: 240px; /* Adjusted width */
+                right: -20px; /* Adjusted position */
+            }
+
+            h1 {
+                font-size: 1.3rem; /* Adjusted font size */
+            }
+
+            .article-card h3 {
+                font-size: 0.7rem; /* Adjusted font size */
+            }
+
+            .contact-card a {
+                font-size: 0.75rem; /* Adjusted font size */
             }
         }
+        /* --- End of Media Queries --- */
     </style>
 </head>
 <body>
@@ -872,8 +914,6 @@
         </div>
 
         <div class="footer">
-            <!-- --- Removed University Logo --- -->
-            <!-- --- Removed University Text --- -->
             <p>&copy; 2025 Dr. Oscar Eybers. All Rights Reserved.</p>
             <!-- --- Updated Footer Links --- -->
             <div class="footer-links">
