@@ -1,833 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Publications | Dr. Oscar Eybers</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Publications | Dr. Oscar Eybers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        :root {
-            --primary: #0ff;
-            --secondary: #f0f;
-            --accent: #9d4edd;
-            --dark: #0a0a14;
-            --darker: #050508;
-            --light: #f0f0f0;
-            --card-bg: rgba(20, 20, 30, 0.7);
-            --golden-yellow: #FFD700;
-        }
+        :root {
+            --primary: #0ff;
+            --secondary: #f0f;
+            --accent: #9d4edd;
+            --dark: #0a0a14;
+            --darker: #050508;
+            --light: #f0f0f0;
+            --card-bg: rgba(20, 20, 30, 0.7);
+            --golden-yellow: #FFD700;
+        }
 
-        body {
-            background: linear-gradient(135deg, var(--darker), var(--dark));
-            color: var(--light);
-            min-height: 100vh;
-            padding: 20px;
-            position: relative;
-            overflow-x: hidden;
-            font-family: 'Exo 2', sans-serif;
-            line-height: 1.6;
-        }
+        body {
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--light);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+            font-family: 'Exo 2', sans-serif;
+            line-height: 1.6;
+        }
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(255, 0, 255, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.03) 0%, transparent 30%);
-            pointer-events: none;
-            z-index: -2;
-        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 0, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.03) 0%, transparent 30%);
+            pointer-events: none;
+            z-index: -2;
+        }
 
-        .grid-lines {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
-            z-index: -1;
-        }
+        .grid-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
 
-        header {
-            text-align: center;
-            padding: 30px 0 15px; /* Reduced by 25% */
-            position: relative;
-            background: linear-gradient(to right, rgba(0, 255, 255, 0.1), transparent);
-            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-            margin-bottom: 22.5px; /* Reduced by 25% */
-            border-radius: 0 0 15px 15px; /* Reduced by 25% */
-        }
+        header {
+            text-align: center;
+            padding: 30px 0 15px; /* Reduced by 25% */
+            position: relative;
+            background: linear-gradient(to right, rgba(0, 255, 255, 0.1), transparent);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            margin-bottom: 22.5px; /* Reduced by 25% */
+            border-radius: 0 0 15px 15px; /* Reduced by 25% */
+        }
 
-        h1 {
-            font-size: 2.4rem; /* Reduced by 25% */
-            margin-bottom: 7.5px; /* Reduced by 25% */
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2.25px; /* Reduced by 25% */
-            text-shadow: 0 0 11.25px rgba(0, 255, 255, 0.5); /* Reduced by 25% */
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-        }
+        /* --- New Style for the Link --- */
+        .eybers-chapters-link {
+            display: block;
+            text-align: center;
+            margin: 10px auto 20px; /* Add some top/bottom margin */
+            padding: 8px 16px;
+            max-width: fit-content;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 20px; /* Rounded pill shape */
+            color: var(--primary); /* Cyan text */
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem; /* Slightly smaller than h1 */
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(0, 255, 255, 0.2); /* Subtle glow */
+        }
 
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: -6px; /* Reduced by 25% */
-            left: 10%;
-            width: 80%;
-            height: 1.5px; /* Reduced by 25% */
-            background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
-            border-radius: 50%;
-        }
+        .eybers-chapters-link:hover {
+            background: rgba(0, 255, 255, 0.2);
+            color: var(--light); /* Light text on hover */
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Stronger glow on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+        /* --- End of New Style --- */
 
-        .subtitle {
-            font-size: 0.825rem; /* Reduced by 25% */
-            color: #aaa;
-            max-width: 800px;
-            margin: 11.25px auto 15px; /* Reduced by 25% */
-            line-height: 1.6;
-        }
 
-        .contact-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 255, 255, 0.1);
-            border-radius: 11.25px; /* Reduced by 25% */
-            padding: 15px; /* Reduced by 25% */
-            max-width: 600px;
-            margin: 22.5px auto; /* Reduced by 25% */
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 22.5px rgba(0, 255, 255, 0.1); /* Reduced by 25% */
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
+        h1 {
+            font-size: 2.4rem; /* Reduced by 25% */
+            margin-bottom: 7.5px; /* Reduced by 25% */
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2.25px; /* Reduced by 25% */
+            text-shadow: 0 0 11.25px rgba(0, 255, 255, 0.5); /* Reduced by 25% */
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
 
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px; /* Reduced by 25% */
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
-        }
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -6px; /* Reduced by 25% */
+            left: 10%;
+            width: 80%;
+            height: 1.5px; /* Reduced by 25% */
+            background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+            border-radius: 50%;
+        }
 
-        .contact-card:hover {
-            transform: translateY(-6px); /* Reduced by 25% */
-            box-shadow: 0 7.5px 30px rgba(0, 255, 255, 0.3); /* Reduced by 25% */
-        }
+        .subtitle {
+            font-size: 0.825rem; /* Reduced by 25% */
+            color: #aaa;
+            max-width: 800px;
+            margin: 11.25px auto 15px; /* Reduced by 25% */
+            line-height: 1.6;
+        }
 
-        .contact-card:hover::before {
-            transform: scaleX(1);
-        }
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 11.25px; /* Reduced by 25% */
+            padding: 15px; /* Reduced by 25% */
+            max-width: 600px;
+            margin: 22.5px auto; /* Reduced by 25% */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 22.5px rgba(0, 255, 255, 0.1); /* Reduced by 25% */
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
 
-        .contact-card h2 {
-            color: var(--primary);
-            margin-bottom: 11.25px; /* Reduced by 25% */
-            font-size: 1.2rem; /* Reduced by 25% */
-            display: flex;
-            align-items: center;
-            gap: 11.25px; /* Reduced by 25% */
-            font-family: 'Orbitron', sans-serif;
-            justify-content: center;
-        }
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px; /* Reduced by 25% */
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
 
-        .contact-card a {
-            color: var(--golden-yellow);
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            word-break: break-all;
-            display: inline-block;
-            padding: 3.75px 7.5px; /* Reduced by 25% */
-            border-radius: 3.75px; /* Reduced by 25% */
-        }
+        .contact-card:hover {
+            transform: translateY(-6px); /* Reduced by 25% */
+            box-shadow: 0 7.5px 30px rgba(0, 255, 255, 0.3); /* Reduced by 25% */
+        }
 
-        .contact-card a:hover {
-            color: var(--golden-yellow);
-            text-shadow: 0 0 11.25px rgba(255, 215, 0, 0.7);
-            background: rgba(255, 255, 255, 0.1);
-        }
+        .contact-card:hover::before {
+            transform: scaleX(1);
+        }
 
-        .articles-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-            gap: 30px;
-            margin: 30px 0; /* Reduced by 25% */
-        }
+        .contact-card h2 {
+            color: var(--primary);
+            margin-bottom: 11.25px; /* Reduced by 25% */
+            font-size: 1.2rem; /* Reduced by 25% */
+            display: flex;
+            align-items: center;
+            gap: 11.25px; /* Reduced by 25% */
+            font-family: 'Orbitron', sans-serif;
+            justify-content: center;
+        }
 
-        .article-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 255, 255, 0.1);
-            border-radius: 11.25px; /* Reduced by 25% */
-            padding: 18.75px; /* Reduced by 25% */
-            transition: all 0.4s ease;
-            backdrop-filter: blur(5px);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+        .contact-card a {
+            color: var(--golden-yellow);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            word-break: break-all;
+            display: inline-block;
+            padding: 3.75px 7.5px; /* Reduced by 25% */
+            border-radius: 3.75px; /* Reduced by 25% */
+        }
 
-        .article-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px; /* Reduced by 25% */
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
-        }
+        .contact-card a:hover {
+            color: var(--golden-yellow);
+            text-shadow: 0 0 11.25px rgba(255, 215, 0, 0.7);
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-        .article-card:hover {
-            transform: translateY(-7.5px); /* Reduced by 25% */
-            box-shadow: 0 11.25px 30px rgba(0, 0, 0, 0.4); /* Reduced by 25% */
-            border-color: rgba(0, 255, 255, 0.4);
-        }
+        .articles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 30px;
+            margin: 30px 0; /* Reduced by 25% */
+        }
 
-        .article-card:hover::before {
-            transform: scaleX(1);
-        }
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 11.25px; /* Reduced by 25% */
+            padding: 18.75px; /* Reduced by 25% */
+            transition: all 0.4s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-        .article-card h3 {
-            color: var(--primary);
-            font-size: 0.975rem; /* Reduced by 25% */
-            margin-bottom: 11.25px; /* Reduced by 25% */
-            line-height: 1.4;
-            flex-grow: 1;
-            font-weight: 600;
-        }
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px; /* Reduced by 25% */
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
 
-        .article-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 9px 0; /* Reduced by 25% */
-        }
+        .article-card:hover {
+            transform: translateY(-7.5px); /* Reduced by 25% */
+            box-shadow: 0 11.25px 30px rgba(0, 0, 0, 0.4); /* Reduced by 25% */
+            border-color: rgba(0, 255, 255, 0.4);
+        }
 
-        .meta-tag {
-            background: rgba(0, 255, 255, 0.1);
-            color: var(--primary);
-            padding: 3.75px 9px; /* Reduced by 25% */
-            border-radius: 15px; /* Reduced by 25% */
-            font-size: 0.6375rem; /* Reduced by 25% */
-            border: 1px solid rgba(0, 255, 255, 0.2);
-        }
+        .article-card:hover::before {
+            transform: scaleX(1);
+        }
 
-        .new-tag {
-            background: rgba(157, 78, 221, 0.2);
-            color: var(--accent);
-            border-color: rgba(157, 78, 221, 0.3);
-        }
+        .article-card h3 {
+            color: var(--primary);
+            font-size: 0.975rem; /* Reduced by 25% */
+            margin-bottom: 11.25px; /* Reduced by 25% */
+            line-height: 1.4;
+            flex-grow: 1;
+            font-weight: 600;
+        }
 
-        .article-journal {
-            color: #bbb;
-            font-style: italic;
-            margin: 6px 0; /* Reduced by 25% */
-            font-size: 0.75rem; /* Reduced by 25% */
-        }
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 9px 0; /* Reduced by 25% */
+        }
 
-        .article-date {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 11.25px; /* Reduced by 25% */
-            font-size: 0.75rem; /* Reduced by 25% */
-        }
+        .meta-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: var(--primary);
+            padding: 3.75px 9px; /* Reduced by 25% */
+            border-radius: 15px; /* Reduced by 25% */
+            font-size: 0.6375rem; /* Reduced by 25% */
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
 
-        .article-link {
-            display: inline-block;
-            color: var(--light);
-            background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(157, 78, 221, 0.2));
-            padding: 7.5px 15px; /* Reduced by 25% */
-            border-radius: 6px; /* Reduced by 25% */
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            text-align: center;
-            width: 100%;
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.75px; /* Reduced by 25% */
-            position: relative;
-            overflow: hidden;
-        }
+        .new-tag {
+            background: rgba(157, 78, 221, 0.2);
+            color: var(--accent);
+            border-color: rgba(157, 78, 221, 0.3);
+        }
 
-        .article-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
+        .article-journal {
+            color: #bbb;
+            font-style: italic;
+            margin: 6px 0; /* Reduced by 25% */
+            font-size: 0.75rem; /* Reduced by 25% */
+        }
 
-        .article-link:hover {
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            color: var(--darker);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Reduced by 25% */
-            transform: translateY(-2.25px); /* Reduced by 25% */
-        }
+        .article-date {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 11.25px; /* Reduced by 25% */
+            font-size: 0.75rem; /* Reduced by 25% */
+        }
 
-        .article-link:hover::before {
-            left: 100%;
-        }
+        .article-link {
+            display: inline-block;
+            color: var(--light);
+            background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(157, 78, 221, 0.2));
+            padding: 7.5px 15px; /* Reduced by 25% */
+            border-radius: 6px; /* Reduced by 25% */
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            text-align: center;
+            width: 100%;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.75px; /* Reduced by 25% */
+            position: relative;
+            overflow: hidden;
+        }
 
-        .footer {
-            text-align: center;
-            padding: 30px 0 15px; /* Reduced by 25% */
-            color: #777;
-            font-size: 0.675rem; /* Reduced by 25% */
-            border-top: 1px solid rgba(0, 255, 255, 0.1);
-            margin-top: 22.5px; /* Reduced by 25% */
-        }
+        .article-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
 
-        .footer p {
-            margin: 6px 0; /* Reduced by 25% */
-        }
+        .article-link:hover {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            color: var(--darker);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Reduced by 25% */
+            transform: translateY(-2.25px); /* Reduced by 25% */
+        }
 
-        .university-logo {
-            width: 120px; /* Reduced by 25% */
-            margin: 11.25px auto; /* Reduced by 25% */
-            filter: brightness(0.8);
-            opacity: 0.7;
-        }
+        .article-link:hover::before {
+            left: 100%;
+        }
 
-        .footer-link {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 4px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
-        }
+        .footer {
+            text-align: center;
+            padding: 30px 0 15px; /* Reduced by 25% */
+            color: #777;
+            font-size: 0.675rem; /* Reduced by 25% */
+            border-top: 1px solid rgba(0, 255, 255, 0.1);
+            margin-top: 22.5px; /* Reduced by 25% */
+        }
 
-        .footer-link:hover {
-            color: var(--secondary);
-            text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 0, 255, 0.3);
-        }
+        .footer p {
+            margin: 6px 0; /* Reduced by 25% */
+        }
 
-        /* Floating Contact Form Styles */
-        .floating-contact {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-        }
+        .university-logo {
+            width: 120px; /* Reduced by 25% */
+            margin: 11.25px auto; /* Reduced by 25% */
+            filter: brightness(0.8);
+            opacity: 0.7;
+        }
 
-        .contact-toggle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: var(--darker);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
-            transition: all 0.3s ease;
-        }
+        .footer-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
 
-        .contact-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.6);
-        }
+        .footer-link:hover {
+            color: var(--secondary);
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 0, 255, 0.3);
+        }
 
-        .contact-form-container {
-            position: absolute;
-            bottom: 70px;
-            right: 0;
-            width: 350px;
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.4s ease;
-        }
+        /* Floating Contact Form Styles */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
 
-        .contact-form-container.visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
+        .contact-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--darker);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
 
-        .contact-form-container h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-family: 'Orbitron', sans-serif;
-            text-align: center;
-        }
+        .contact-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.6);
+        }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+        .contact-form-container {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 350px;
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #ccc;
-            font-size: 0.9rem;
-        }
+        .contact-form-container.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            background: rgba(10, 10, 20, 0.7);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 5px;
-            color: var(--light);
-            font-family: 'Exo 2', sans-serif;
-        }
+        .contact-form-container h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+        }
 
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            color: var(--darker);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
 
-        .submit-btn:hover {
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: rgba(10, 10, 20, 0.7);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 5px;
+            color: var(--light);
+            font-family: 'Exo 2', sans-serif;
+        }
 
-        .form-message {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 0.9rem;
-            display: none;
-        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
 
-        .form-message.success {
-            background: rgba(0, 255, 0, 0.1);
-            color: #0f0;
-            border: 1px solid rgba(0, 255, 0, 0.3);
-            display: block;
-        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            color: var(--darker);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
 
-        .form-message.error {
-            background: rgba(255, 0, 0, 0.1);
-            color: #f00;
-            border: 1px solid rgba(255, 0, 0, 0.3);
-            display: block;
-        }
+        .submit-btn:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
 
-        @media (max-width: 1100px) {
-            .articles-container {
-                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            }
-        }
+        .form-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
+        }
 
-        @media (max-width: 900px) {
-            .articles-container {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2.1rem; /* Adjusted for smaller screens */
-            }
-            
-            .subtitle {
-                font-size: 0.75rem;
-            }
-        }
+        .form-message.success {
+            background: rgba(0, 255, 0, 0.1);
+            color: #0f0;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            display: block;
+        }
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.65rem;
-            }
-            
-            .contact-card a {
-                font-size: 0.75rem;
-            }
-            
-            .article-card {
-                padding: 15px 11.25px;
-            }
-            
-            .article-card h3 {
-                font-size: 0.9rem;
-            }
-            
-            .floating-contact {
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .contact-form-container {
-                width: 300px;
-                right: -20px;
-            }
-        }
+        .form-message.error {
+            background: rgba(255, 0, 0, 0.1);
+            color: #f00;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            display: block;
+        }
 
-        @media (max-width: 400px) {
-            .contact-form-container {
-                width: 280px;
-                right: -40px;
-            }
-        }
-    </style>
+        @media (max-width: 1100px) {
+            .articles-container {
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            }
+        }
+
+        @media (max-width: 900px) {
+            .articles-container {
+                grid-template-columns: 1fr;
+            }
+         
+            h1 {
+                font-size: 2.1rem; /* Adjusted for smaller screens */
+            }
+         
+            .subtitle {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.65rem;
+            }
+         
+            .contact-card a {
+                font-size: 0.75rem;
+            }
+         
+            .article-card {
+                padding: 15px 11.25px;
+            }
+         
+            .article-card h3 {
+                font-size: 0.9rem;
+            }
+         
+            .floating-contact {
+                bottom: 20px;
+                right: 20px;
+            }
+         
+            .contact-form-container {
+                width: 300px;
+                right: -20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .contact-form-container {
+                width: 280px;
+                right: -40px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="grid-lines"></div>
-    
-    <div class="container">
-        <header>
-            <h1>Research Publications</h1>
-            <p class="subtitle">Explore the academic contributions of Dr. Oscar Eybers in the fields of academic literacy, decoloniality, and higher education transformation.</p>
-            
-            <div class="contact-card">
-                <h2><i class="fas fa-envelope"></i> Contact Information</h2>
-                <a href="mailto:oscar.eybers@up.ac.za">oscar.eybers@up.ac.za</a>
-            </div>
-        </header>
+    <div class="grid-lines"></div>
+ 
+    <div class="container">
+        <header>
+            <h1>Research Publications</h1>
+            <p class="subtitle">Explore the academic contributions of Dr. Oscar Eybers in the fields of academic literacy, decoloniality, and higher education transformation.</p>
+            
+            <!-- --- Added Link --- -->
+            <a href="https://oeybers-cpu.github.io/chapters/" class="eybers-chapters-link">Visit Eybers Chapters</a>
+            <!-- --- End of Added Link --- -->
 
-        <div class="articles-container">
-                        <div class="article-card">
-                <h3>Decolonizing Academic Literacy with ተዋሕዶ/Tewahedo and Multiliteracies in Higher Education</h3>
-                <div class="article-meta">
-                    <span class="meta-tag new-tag">New</span>
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Genealogy</p>
-                <p class="article-date">April 2025</p>
-                <a href="https://www.researchgate.net/publication/391271730_Decolonizing_Academic_Literacy_with_Tewahedo_and_Multiliteracies_in_Higher_Education" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Transforming Academic Literacy: Centering Indigenous Identities in the Classroom</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Genealogy</p>
-                <p class="article-date">February 2025</p>
-                <a href="https://www.researchgate.net/publication/388951586_Transforming_Academic_Literacy_Centering_Indigenous_Identities_in_the_Classroom" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>An Inclusive African Theory of Academic Literacy</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">International Journal of Literacies</p>
-                <p class="article-date">January 2025</p>
-                <a href="https://www.researchgate.net/publication/388081527_An_Inclusive_African_Theory_of_Academic_Literacy" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Co-designing and implementing transdisciplinary academic literacy in higher education</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Journal for Educators Teachers and Trainers</p>
-                <p class="article-date">January 2025</p>
-                <a href="https://www.researchgate.net/publication/388081394_Co-designing_and_implementing_transdisciplinary_academic_literacy_in_higher_education" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Afrofuturistic Translanguaging: Pathways to Students' Wellbeing in Disciplines</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-date">December 2023</p>
-                <a href="https://www.researchgate.net/publication/376953464_Afrofuturistic_Translanguaging_Pathways_to_Students'_Wellbeing_in_Disciplines" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Afrocentricity and Decoloniality in Disciplinarity: A Reflective Dialogue on Academic Literacy Development</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Critical Studies in Teaching and Learning</p>
-                <p class="article-date">December 2023</p>
-                <a href="https://www.researchgate.net/publication/376687221_Afrocentricity_and_Decoloniality_in_Disciplinarity_A_Reflective_Dialogue_on_Academic_Literacy_Development" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Left, Right then Left Again: Educators at the Intersection of Global Citizenship Education, Technology and Academic Literacies</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Journal of Creative Communications</p>
-                <p class="article-date">October 2023</p>
-                <a href="https://www.researchgate.net/publication/374738276_Left_Right_then_Left_Again_Educators_at_the_Intersection_of_Global_Citizenship_Education_Technology_and_Academic_Literacies" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>"You Are Essentially Just a Number": Discourse Elaboration and Devaluation among Natural Science Students</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Education Research International</p>
-                <p class="article-date">May 2023</p>
-                <a href="https://www.researchgate.net/publication/370837479_You_Are_Essentially_Justa_Number_Discourse_Elaboration_and_Devaluation_among_Natural_Science_Students" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Can Academic Writing Transform Epistemicide to Emancipation?</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">International Journal of Educational Leadership and Management</p>
-                <p class="article-date">November 2022</p>
-                <a href="https://www.researchgate.net/publication/365663789_Can_Academic_Writing_Transform_Epistemicide_to_Emancipation" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Coloniality as ontological appropriation: Insights from South Africa and Ethiopia</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Journal of Black Studies</p>
-                <p class="article-date">November 2022</p>
-                <a href="https://www.researchgate.net/publication/365275704_Coloniality_as_ontological_appropriation_Insights_from_South_Africa_and_Ethiopia" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Sociocultural theory for academic literacy research involving argumentation in institutions of higher learning</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">South African Journal of Higher Education</p>
-                <p class="article-date">May 2022</p>
-                <a href="https://www.researchgate.net/publication/360784180_Sociocultural_theory_for_academic_literacy_research_involving_argumentation_in_institutions_of_higher_learning" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Discourse as a Generator of Epistemic Relativism in Scientific Argumentation</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">International Journal of Literacies</p>
-                <p class="article-date">September 2021</p>
-                <a href="https://www.researchgate.net/publication/354661580_Discourse_as_a_Generator_of_Epistemic_Relativism_in_Scientific_Argumentation" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Embedding Ubuntu Principles into Dialectic Argumentation and Academic Writing</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Alternation Interdisciplinary Journal for the Study of the Arts and Humanities in Southern Africa</p>
-                <p class="article-date">April 2021</p>
-                <a href="https://www.researchgate.net/publication/350870059_Embedding_Ubuntu_Principles_into_Dialectic_Argumentation_and_Academic_Writing" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Social Realist Ontology for Analysing BRICS Educational Governance: A Higher Education Perspective</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Space and Culture</p>
-                <p class="article-date">May 2020</p>
-                <a href="https://www.researchgate.net/publication/341255075_Social_Realist_Ontology_for_Analysing_BRICS_Educational_Governance_A_Higher_Education_Perspective" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Intersections of Decolonial and Global Citizenship Principles in Academic Literacy Curricula</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">The International Journal of Diversity in Education</p>
-                <p class="article-date">April 2020</p>
-                <a href="https://www.researchgate.net/publication/340681270_Intersections_of_Decolonial_and_Global_Citizenship_Principles_in_Academic_Literacy_Curricula" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Leaps into Cyberspace: A Case Study for Scaffolding Argumentation in a Hybridized Academic Literacy Module</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">International Journal of Learning in Higher Education</p>
-                <p class="article-date">January 2020</p>
-                <a href="https://www.researchgate.net/publication/342799152_Leaps_into_Cyberspace_A_Case_Study_for_Scaffolding_Argumentation_in_a_Hybridized_Academic_Literacy_Module" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Rethinking the Teaching of Academic Literacy in the Context of Calls for Curriculum Decolonization in South Africa</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">International Journal of Pedagogy and Curriculum</p>
-                <p class="article-date">September 2019</p>
-                <a href="https://www.researchgate.net/publication/335881665_Rethinking_the_Teaching_of_Academic_Literacy_in_the_Context_of_Calls_for_Curriculum_Decolonization_in_South_Africa" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>A social realist ontology for developing Afrocentric curricula in Africa</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-date">July 2019</p>
-                <a href="https://www.researchgate.net/publication/334327978_A_social_realist_ontology_for_developing_Afrocentric_curricula_in_Africa" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Applying Ayittey's Indigenous African Institutions to generate epistemic plurality in the curriculum</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">Transformation in Higher Education</p>
-                <p class="article-date">June 2019</p>
-                <a href="https://www.researchgate.net/publication/333981459_Applying_Ayittey's_Indigenous_African_Institutions_to_generate_epistemic_plurality_in_the_curriculum" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>Friends or foes? A theoretical approach towards constructivism, realism and students' wellbeing via academic literacy practices</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">South African Journal of Education</p>
-                <p class="article-date">December 2018</p>
-                <a href="https://www.researchgate.net/publication/329365508_Friends_or_foes_A_theoretical_approach_towards_constructivism_realism_and_students'_wellbeing_via_academic_literacy_practices" class="article-link">Access Publication</a>
-            </div>
-            
-                        <div class="article-card">
-                <h3>From mechanist to critical realist interrogations of academic literacy facilitation in extended degree curricula</h3>
-                <div class="article-meta">
-                    <span class="meta-tag">Full-text available</span>
-                </div>
-                <p class="article-journal">South African Journal of Higher Education</p>
-                <p class="article-date">January 2016</p>
-                <a href="https://www.researchgate.net/publication/319889643_From_mechanist_to_critical_realist_interrogations_of_academic_literacy_facilitation_in_extended_degree_curricula" class="article-link">Access Publication</a>
-            </div>
-        </div>
+            <div class="contact-card">
+                <h2><i class="fas fa-envelope"></i> Contact Information</h2>
+                <a href="mailto:oscar.eybers@up.ac.za">oscar.eybers@up.ac.za</a>
+            </div>
+        </header>
 
-        <div class="footer">
-            <div class="university-logo">
-                <svg viewBox="0 0 100 30" fill="currentColor" stroke="none">
-                    <title>University of Pretoria Logo</title>
-                    <path d="M50 0c-13.8 0-25 11.2-25 25h-5c0-16.6 13.4-30 30-30s30 13.4 30 30h-5c0-13.8-11.2-25-25-25zM50 5c-11 0-20 9-20 20h-5c0-13.8 11.2-25 25-25s25 11.2 25 25h-5c0-11-9-20-20-20zM50 10c-8.3 0-15 6.7-15 15h-5c0-11 9-20 20-20s20 9 20 20h-5c0-8.3-6.7-15-15-15zM50 15c-5.5 0-10 4.5-10 10h-5c0-8.3 6.7-15 15-15s15 6.7 15 15h-5c0-5.5-4.5-10-10-10z"></path>
-                </svg>
-            </div>
-            <p>University of Pretoria</p>
-            <p>&copy; 2025 Dr. Oscar Eybers. All Rights Reserved.</p>
-            <a href="#" class="footer-link">Privacy Policy</a>
-        </div>
-    </div>
+        <div class="articles-container">
+                        <div class="article-card">
+                <h3>Decolonizing Academic Literacy with ተዋሕዶ/Tewahedo and Multiliteracies in Higher Education</h3>
+                <div class="article-meta">
+                    <span class="meta-tag new-tag">New</span>
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Genealogy</p>
+                <p class="article-date">April 2025</p>
+                <a href="  https://www.researchgate.net/publication/391271730_Decolonizing_Academic_Literacy_with_Tewahedo_and_Multiliteracies_in_Higher_Education  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Transforming Academic Literacy: Centering Indigenous Identities in the Classroom</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Genealogy</p>
+                <p class="article-date">February 2025</p>
+                <a href="https://www.researchgate.net/publication/388951586_Transforming_Academic_Literacy_Centering_Indigenous_Identities_in_the_Classroom  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>An Inclusive African Theory of Academic Literacy</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Literacies</p>
+                <p class="article-date">January 2025</p>
+                <a href="https://www.researchgate.net/publication/388081527_An_Inclusive_African_Theory_of_Academic_Literacy  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Co-designing and implementing transdisciplinary academic literacy in higher education</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Journal for Educators Teachers and Trainers</p>
+                <p class="article-date">January 2025</p>
+                <a href="https://www.researchgate.net/publication/388081394_Co-designing_and_implementing_transdisciplinary_academic_literacy_in_higher_education  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Afrofuturistic Translanguaging: Pathways to Students' Wellbeing in Disciplines</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-date">December 2023</p>
+                <a href="https://www.researchgate.net/publication/376953464_Afrofuturistic_Translanguaging_Pathways_to_Students  '_Wellbeing_in_Disciplines" class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Afrocentricity and Decoloniality in Disciplinarity: A Reflective Dialogue on Academic Literacy Development</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Critical Studies in Teaching and Learning</p>
+                <p class="article-date">December 2023</p>
+                <a href="https://www.researchgate.net/publication/376687221_Afrocentricity_and_Decoloniality_in_Disciplinarity_A_Reflective_Dialogue_on_Academic_Literacy_Development  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Left, Right then Left Again: Educators at the Intersection of Global Citizenship Education, Technology and Academic Literacies</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Journal of Creative Communications</p>
+                <p class="article-date">October 2023</p>
+                <a href="https://www.researchgate.net/publication/374738276_Left_Right_then_Left_Again_Educators_at_the_Intersection_of_Global_Citizenship_Education_Technology_and_Academic_Literacies  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>"You Are Essentially Just a Number": Discourse Elaboration and Devaluation among Natural Science Students</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Education Research International</p>
+                <p class="article-date">May 2023</p>
+                <a href="https://www.researchgate.net/publication/370837479_You_Are_Essentially_Justa_Number_Discourse_Elaboration_and_Devaluation_among_Natural_Science_Students  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Can Academic Writing Transform Epistemicide to Emancipation?</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Educational Leadership and Management</p>
+                <p class="article-date">November 2022</p>
+                <a href="https://www.researchgate.net/publication/365663789_Can_Academic_Writing_Transform_Epistemicide_to_Emancipation  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Coloniality as ontological appropriation: Insights from South Africa and Ethiopia</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Journal of Black Studies</p>
+                <p class="article-date">November 2022</p>
+                <a href="https://www.researchgate.net/publication/365275704_Coloniality_as_ontological_appropriation_Insights_from_South_Africa_and_Ethiopia  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Sociocultural theory for academic literacy research involving argumentation in institutions of higher learning</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">South African Journal of Higher Education</p>
+                <p class="article-date">May 2022</p>
+                <a href="https://www.researchgate.net/publication/360784180_Sociocultural_theory_for_academic_literacy_research_involving_argumentation_in_institutions_of_higher_learning  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Discourse as a Generator of Epistemic Relativism in Scientific Argumentation</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Literacies</p>
+                <p class="article-date">September 2021</p>
+                <a href="https://www.researchgate.net/publication/354661580_Discourse_as_a_Generator_of_Epistemic_Relativism_in_Scientific_Argumentation  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Embedding Ubuntu Principles into Dialectic Argumentation and Academic Writing</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Alternation Interdisciplinary Journal for the Study of the Arts and Humanities in Southern Africa</p>
+                <p class="article-date">April 2021</p>
+                <a href="https://www.researchgate.net/publication/350870059_Embedding_Ubuntu_Principles_into_Dialectic_Argumentation_and_Academic_Writing  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Social Realist Ontology for Analysing BRICS Educational Governance: A Higher Education Perspective</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Space and Culture</p>
+                <p class="article-date">May 2020</p>
+                <a href="https://www.researchgate.net/publication/341255075_Social_Realist_Ontology_for_Analysing_BRICS_Educational_Governance_A_Higher_Education_Perspective  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Intersections of Decolonial and Global Citizenship Principles in Academic Literacy Curricula</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">The International Journal of Diversity in Education</p>
+                <p class="article-date">April 2020</p>
+                <a href="https://www.researchgate.net/publication/340681270_Intersections_of_Decolonial_and_Global_Citizenship_Principles_in_Academic_Literacy_Curricula  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Leaps into Cyberspace: A Case Study for Scaffolding Argumentation in a Hybridized Academic Literacy Module</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Learning in Higher Education</p>
+                <p class="article-date">January 2020</p>
+                <a href="https://www.researchgate.net/publication/342799152_Leaps_into_Cyberspace_A_Case_Study_for_Scaffolding_Argumentation_in_a_Hybridized_Academic_Literacy_Module  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Rethinking the Teaching of Academic Literacy in the Context of Calls for Curriculum Decolonization in South Africa</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">International Journal of Pedagogy and Curriculum</p>
+                <p class="article-date">September 2019</p>
+                <a href="https://www.researchgate.net/publication/335881665_Rethinking_the_Teaching_of_Academic_Literacy_in_the_Context_of_Calls_for_Curriculum_Decolonization_in_South_Africa  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>A social realist ontology for developing Afrocentric curricula in Africa</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-date">July 2019</p>
+                <a href="https://www.researchgate.net/publication/334327978_A_social_realist_ontology_for_developing_Afrocentric_curricula_in_Africa  " class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Applying Ayittey's Indigenous African Institutions to generate epistemic plurality in the curriculum</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">Transformation in Higher Education</p>
+                <p class="article-date">June 2019</p>
+                <a href="https://www.researchgate.net/publication/333981459_Applying_Ayittey  's_Indigenous_African_Institutions_to_generate_epistemic_plurality_in_the_curriculum" class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>Friends or foes? A theoretical approach towards constructivism, realism and students' wellbeing via academic literacy practices</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">South African Journal of Education</p>
+                <p class="article-date">December 2018</p>
+                <a href="https://www.researchgate.net/publication/329365508_Friends_or_foes_A_theoretical_approach_towards_constructivism_realism_and_students  '_wellbeing_via_academic_literacy_practices" class="article-link">Access Publication</a>
+            </div>
+ 
+                        <div class="article-card">
+                <h3>From mechanist to critical realist interrogations of academic literacy facilitation in extended degree curricula</h3>
+                <div class="article-meta">
+                    <span class="meta-tag">Full-text available</span>
+                </div>
+                <p class="article-journal">South African Journal of Higher Education</p>
+                <p class="article-date">January 2016</p>
+                <a href="https://www.researchgate.net/publication/319889643_From_mechanist_to_critical_realist_interrogations_of_academic_literacy_facilitation_in_extended_degree_curricula  " class="article-link">Access Publication</a>
+            </div>
+        </div>
 
-    <div class="floating-contact">
-        <button class="contact-toggle">
-            <i class="fas fa-envelope"></i>
-        </button>
-        <div class="contact-form-container">
-            <h3>Contact Dr. Eybers</h3>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-            <div id="formMessage" class="form-message"></div>
-        </div>
-    </div>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const contactToggle = document.querySelector('.contact-toggle');
-            const contactFormContainer = document.querySelector('.contact-form-container');
-            const contactForm = document.getElementById('contactForm');
-            const formMessage = document.getElementById('formMessage');
+        <div class="footer">
+            <div class="university-logo">
+                <svg viewBox="0 0 100 30" fill="currentColor" stroke="none">
+                    <title>University of Pretoria Logo</title>
+                    <path d="M50 0c-13.8 0-25 11.2-25 25h-5c0-16.6 13.4-30 30-30s30 13.4 30 30h-5c0-13.8-11.2-25-25-25zM50 5c-11 0-20 9-20 20h-5c0-13.8 11.2-25 25-25s25 11.2 25 25h-5c0-11-9-20-20-20zM50 10c-8.3 0-15 6.7-15 15h-5c0-11 9-20 20-20s20 9 20 20h-5c0-8.3-6.7-15-15-15zM50 15c-5.5 0-10 4.5-10 10h-5c0-8.3 6.7-15 15-15s15 6.7 15 15h-5c0-5.5-4.5-10-10-10z"></path>
+                </svg>
+            </div>
+            <p>University of Pretoria</p>
+            <p>&copy; 2025 Dr. Oscar Eybers. All Rights Reserved.</p>
+            <a href="#" class="footer-link">Privacy Policy</a>
+        </div>
+    </div>
 
-            if (contactToggle && contactFormContainer) {
-                contactToggle.addEventListener('click', () => {
-                    contactFormContainer.classList.toggle('visible');
-                });
-            }
+    <div class="floating-contact">
+        <button class="contact-toggle">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <div class="contact-form-container">
+            <h3>Contact Dr. Eybers</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </div>
+    </div>
+ 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactToggle = document.querySelector('.contact-toggle');
+            const contactFormContainer = document.querySelector('.contact-form-container');
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
 
-            if (contactForm) {
-                contactForm.addEventListener('submit', (event) => {
-                    event.preventDefault();
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const message = document.getElementById('message').value;
+            if (contactToggle && contactFormContainer) {
+                contactToggle.addEventListener('click', () => {
+                    contactFormContainer.classList.toggle('visible');
+                });
+            }
 
-                    // Simulate form submission
-                    console.log('Name:', name);
-                    console.log('Email:', email);
-                    console.log('Message:', message);
+            if (contactForm) {
+                contactForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
 
-                    // Simulate success
-                    formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
-                    formMessage.classList.add('success');
-                    formMessage.style.display = 'block';
+                    // Simulate form submission
+                    console.log('Name:', name);
+                    console.log('Email:', email);
+                    console.log('Message:', message);
 
-                    contactForm.reset();
-                });
-            }
-        });
-    </script>
+                    // Simulate success
+                    formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+                    formMessage.classList.add('success');
+                    formMessage.style.display = 'block';
+
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
