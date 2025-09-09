@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal Articles | Dr. Oscar Eybers</title>
+    <title>Research Publications | Dr. Oscar Eybers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -80,7 +80,42 @@
             border-radius: 0 0 15px 15px; /* Reduced by 25% */
         }
 
-        /* --- Updated Style for the Link --- */
+        /* --- Header Home Link Style --- */
+        .header-home-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-block;
+            text-align: center;
+            padding: 8px 16px; /* Slightly smaller padding */
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: 1px solid var(--light);
+            border-radius: 20px; /* Rounded pill shape */
+            color: var(--darker);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem; /* Smaller text */
+            transition: all 0.3s ease;
+            box-shadow:
+                0 0 8px var(--primary),
+                0 0 15px var(--secondary),
+                inset 0 0 5px rgba(255, 255, 255, 0.5);
+            z-index: 10;
+        }
+
+        .header-home-link:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow:
+                0 0 15px var(--primary),
+                0 0 25px var(--secondary),
+                inset 0 0 10px rgba(255, 255, 255, 0.8);
+            color: var(--darker);
+        }
+        /* --- End of Header Home Link Style --- */
+
+
+        /* --- Updated Style for the Chapters Link --- */
         .eybers-chapters-link {
             display: inline-block; /* Changed from block to inline-block */
             text-align: center;
@@ -383,16 +418,17 @@
             margin: 6px 0; /* Reduced by 25% */
         }
 
-        .university-logo {
-            width: 120px; /* Reduced by 25% */
-            margin: 11.25px auto; /* Reduced by 25% */
-            filter: brightness(0.8);
-            opacity: 0.7;
+        /* --- Updated Footer Links --- */
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between links */
+            flex-wrap: wrap; /* Wrap on small screens */
+            margin-top: 15px;
         }
 
-        .footer-link {
+        .footer-link, .footer-top-link, .footer-home-link {
             display: inline-block;
-            margin-top: 15px;
             color: var(--primary);
             text-decoration: none;
             font-size: 0.9rem;
@@ -402,12 +438,14 @@
             border: 1px solid rgba(0, 255, 255, 0.2);
         }
 
-        .footer-link:hover {
+        .footer-link:hover, .footer-top-link:hover, .footer-home-link:hover {
             color: var(--secondary);
             text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
             background: rgba(255, 255, 255, 0.1);
             border-color: rgba(255, 0, 255, 0.3);
         }
+        /* --- End of Updated Footer Links --- */
+
 
         /* Floating Contact Form Styles */
         .floating-contact {
@@ -582,6 +620,14 @@
                 width: 300px;
                 right: -20px;
             }
+
+            /* Adjust header home link for small screens */
+            .header-home-link {
+                top: 10px;
+                left: 10px;
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
         }
 
         @media (max-width: 400px) {
@@ -597,8 +643,12 @@
  
     <div class="container">
         <header>
-            <h1>Journal Articles</h1>
-            <p class="subtitle">Explore the academic contributions of Dr. Oscar Eybers in the fields of academic literacy, sociocultural linguistics, and higher education transformation.</p>
+            <!-- --- Added Header Home Link --- -->
+            <a href="https://oeybers-cpu.github.io/a_lit_models/" class="header-home-link">Home</a>
+            <!-- --- End of Header Home Link --- -->
+
+            <h1>Research Publications</h1>
+            <p class="subtitle">Explore the academic contributions of Dr. Oscar Eybers in the fields of academic literacy, decoloniality, and higher education transformation.</p>
             
             <!-- --- Updated Link --- -->
             <a href="https://oeybers-cpu.github.io/chapters/" class="eybers-chapters-link">Visit Eybers Chapters</a>
@@ -611,7 +661,7 @@
         </header>
 
         <div class="articles-container">
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Decolonizing Academic Literacy with ተዋሕዶ/Tewahedo and Multiliteracies in Higher Education</h3>
                 <div class="article-meta">
                     <span class="meta-tag new-tag">New</span>
@@ -619,218 +669,219 @@
                 </div>
                 <p class="article-journal">Genealogy</p>
                 <p class="article-date">April 2025</p>
-                <a href="  https://www.researchgate.net/publication/391271730_Decolonizing_Academic_Literacy_with_Tewahedo_and_Multiliteracies_in_Higher_Education  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/391271730_Decolonizing_Academic_Literacy_with_Tewahedo_and_Multiliteracies_in_Higher_Education" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Transforming Academic Literacy: Centering Indigenous Identities in the Classroom</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Genealogy</p>
                 <p class="article-date">February 2025</p>
-                <a href="https://www.researchgate.net/publication/388951586_Transforming_Academic_Literacy_Centering_Indigenous_Identities_in_the_Classroom  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/388951586_Transforming_Academic_Literacy_Centering_Indigenous_Identities_in_the_Classroom" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>An Inclusive African Theory of Academic Literacy</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">International Journal of Literacies</p>
                 <p class="article-date">January 2025</p>
-                <a href="https://www.researchgate.net/publication/388081527_An_Inclusive_African_Theory_of_Academic_Literacy  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/388081527_An_Inclusive_African_Theory_of_Academic_Literacy" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Co-designing and implementing transdisciplinary academic literacy in higher education</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Journal for Educators Teachers and Trainers</p>
                 <p class="article-date">January 2025</p>
-                <a href="https://www.researchgate.net/publication/388081394_Co-designing_and_implementing_transdisciplinary_academic_literacy_in_higher_education  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/388081394_Co-designing_and_implementing_transdisciplinary_academic_literacy_in_higher_education" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Afrofuturistic Translanguaging: Pathways to Students' Wellbeing in Disciplines</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-date">December 2023</p>
-                <a href="https://www.researchgate.net/publication/376953464_Afrofuturistic_Translanguaging_Pathways_to_Students  '_Wellbeing_in_Disciplines" class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/376953464_Afrofuturistic_Translanguaging_Pathways_to_Students'_Wellbeing_in_Disciplines" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Afrocentricity and Decoloniality in Disciplinarity: A Reflective Dialogue on Academic Literacy Development</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Critical Studies in Teaching and Learning</p>
                 <p class="article-date">December 2023</p>
-                <a href="https://www.researchgate.net/publication/376687221_Afrocentricity_and_Decoloniality_in_Disciplinarity_A_Reflective_Dialogue_on_Academic_Literacy_Development  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/376687221_Afrocentricity_and_Decoloniality_in_Disciplinarity_A_Reflective_Dialogue_on_Academic_Literacy_Development" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Left, Right then Left Again: Educators at the Intersection of Global Citizenship Education, Technology and Academic Literacies</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Journal of Creative Communications</p>
                 <p class="article-date">October 2023</p>
-                <a href="https://www.researchgate.net/publication/374738276_Left_Right_then_Left_Again_Educators_at_the_Intersection_of_Global_Citizenship_Education_Technology_and_Academic_Literacies  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/374738276_Left_Right_then_Left_Again_Educators_at_the_Intersection_of_Global_Citizenship_Education_Technology_and_Academic_Literacies" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>"You Are Essentially Just a Number": Discourse Elaboration and Devaluation among Natural Science Students</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Education Research International</p>
                 <p class="article-date">May 2023</p>
-                <a href="https://www.researchgate.net/publication/370837479_You_Are_Essentially_Justa_Number_Discourse_Elaboration_and_Devaluation_among_Natural_Science_Students  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/370837479_You_Are_Essentially_Justa_Number_Discourse_Elaboration_and_Devaluation_among_Natural_Science_Students" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Can Academic Writing Transform Epistemicide to Emancipation?</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">International Journal of Educational Leadership and Management</p>
                 <p class="article-date">November 2022</p>
-                <a href="https://www.researchgate.net/publication/365663789_Can_Academic_Writing_Transform_Epistemicide_to_Emancipation  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/365663789_Can_Academic_Writing_Transform_Epistemicide_to_Emancipation" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Coloniality as ontological appropriation: Insights from South Africa and Ethiopia</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Journal of Black Studies</p>
                 <p class="article-date">November 2022</p>
-                <a href="https://www.researchgate.net/publication/365275704_Coloniality_as_ontological_appropriation_Insights_from_South_Africa_and_Ethiopia  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/365275704_Coloniality_as_ontological_appropriation_Insights_from_South_Africa_and_Ethiopia" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Sociocultural theory for academic literacy research involving argumentation in institutions of higher learning</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">South African Journal of Higher Education</p>
                 <p class="article-date">May 2022</p>
-                <a href="https://www.researchgate.net/publication/360784180_Sociocultural_theory_for_academic_literacy_research_involving_argumentation_in_institutions_of_higher_learning  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/360784180_Sociocultural_theory_for_academic_literacy_research_involving_argumentation_in_institutions_of_higher_learning" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Discourse as a Generator of Epistemic Relativism in Scientific Argumentation</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">International Journal of Literacies</p>
                 <p class="article-date">September 2021</p>
-                <a href="https://www.researchgate.net/publication/354661580_Discourse_as_a_Generator_of_Epistemic_Relativism_in_Scientific_Argumentation  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/354661580_Discourse_as_a_Generator_of_Epistemic_Relativism_in_Scientific_Argumentation" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Embedding Ubuntu Principles into Dialectic Argumentation and Academic Writing</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Alternation Interdisciplinary Journal for the Study of the Arts and Humanities in Southern Africa</p>
                 <p class="article-date">April 2021</p>
-                <a href="https://www.researchgate.net/publication/350870059_Embedding_Ubuntu_Principles_into_Dialectic_Argumentation_and_Academic_Writing  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/350870059_Embedding_Ubuntu_Principles_into_Dialectic_Argumentation_and_Academic_Writing" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Social Realist Ontology for Analysing BRICS Educational Governance: A Higher Education Perspective</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Space and Culture</p>
                 <p class="article-date">May 2020</p>
-                <a href="https://www.researchgate.net/publication/341255075_Social_Realist_Ontology_for_Analysing_BRICS_Educational_Governance_A_Higher_Education_Perspective  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/341255075_Social_Realist_Ontology_for_Analysing_BRICS_Educational_Governance_A_Higher_Education_Perspective" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Intersections of Decolonial and Global Citizenship Principles in Academic Literacy Curricula</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">The International Journal of Diversity in Education</p>
                 <p class="article-date">April 2020</p>
-                <a href="https://www.researchgate.net/publication/340681270_Intersections_of_Decolonial_and_Global_Citizenship_Principles_in_Academic_Literacy_Curricula  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/340681270_Intersections_of_Decolonial_and_Global_Citizenship_Principles_in_Academic_Literacy_Curricula" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Leaps into Cyberspace: A Case Study for Scaffolding Argumentation in a Hybridized Academic Literacy Module</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">International Journal of Learning in Higher Education</p>
                 <p class="article-date">January 2020</p>
-                <a href="https://www.researchgate.net/publication/342799152_Leaps_into_Cyberspace_A_Case_Study_for_Scaffolding_Argumentation_in_a_Hybridized_Academic_Literacy_Module  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/342799152_Leaps_into_Cyberspace_A_Case_Study_for_Scaffolding_Argumentation_in_a_Hybridized_Academic_Literacy_Module" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Rethinking the Teaching of Academic Literacy in the Context of Calls for Curriculum Decolonization in South Africa</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">International Journal of Pedagogy and Curriculum</p>
                 <p class="article-date">September 2019</p>
-                <a href="https://www.researchgate.net/publication/335881665_Rethinking_the_Teaching_of_Academic_Literacy_in_the_Context_of_Calls_for_Curriculum_Decolonization_in_South_Africa  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/335881665_Rethinking_the_Teaching_of_Academic_Literacy_in_the_Context_of_Calls_for_Curriculum_Decolonization_in_South_Africa" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>A social realist ontology for developing Afrocentric curricula in Africa</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-date">July 2019</p>
-                <a href="https://www.researchgate.net/publication/334327978_A_social_realist_ontology_for_developing_Afrocentric_curricula_in_Africa  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/334327978_A_social_realist_ontology_for_developing_Afrocentric_curricula_in_Africa" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Applying Ayittey's Indigenous African Institutions to generate epistemic plurality in the curriculum</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">Transformation in Higher Education</p>
                 <p class="article-date">June 2019</p>
-                <a href="https://www.researchgate.net/publication/333981459_Applying_Ayittey  's_Indigenous_African_Institutions_to_generate_epistemic_plurality_in_the_curriculum" class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/333981459_Applying_Ayittey's_Indigenous_African_Institutions_to_generate_epistemic_plurality_in_the_curriculum" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>Friends or foes? A theoretical approach towards constructivism, realism and students' wellbeing via academic literacy practices</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">South African Journal of Education</p>
                 <p class="article-date">December 2018</p>
-                <a href="https://www.researchgate.net/publication/329365508_Friends_or_foes_A_theoretical_approach_towards_constructivism_realism_and_students  '_wellbeing_via_academic_literacy_practices" class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/329365508_Friends_or_foes_A_theoretical_approach_towards_constructivism_realism_and_students'_wellbeing_via_academic_literacy_practices" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
  
-                        <div class="article-card">
+            <div class="article-card">
                 <h3>From mechanist to critical realist interrogations of academic literacy facilitation in extended degree curricula</h3>
                 <div class="article-meta">
                     <span class="meta-tag">Full-text available</span>
                 </div>
                 <p class="article-journal">South African Journal of Higher Education</p>
                 <p class="article-date">January 2016</p>
-                <a href="https://www.researchgate.net/publication/319889643_From_mechanist_to_critical_realist_interrogations_of_academic_literacy_facilitation_in_extended_degree_curricula  " class="article-link">Access Publication</a>
+                <a href="https://www.researchgate.net/publication/319889643_From_mechanist_to_critical_realist_interrogations_of_academic_literacy_facilitation_in_extended_degree_curricula" class="article-link" target="_blank" rel="noopener noreferrer">Access Publication</a>
             </div>
         </div>
 
         <div class="footer">
-            <div class="university-logo">
-                <svg viewBox="0 0 100 30" fill="currentColor" stroke="none">
-                    <title>University of Pretoria Logo</title>
-                    <path d="M50 0c-13.8 0-25 11.2-25 25h-5c0-16.6 13.4-30 30-30s30 13.4 30 30h-5c0-13.8-11.2-25-25-25zM50 5c-11 0-20 9-20 20h-5c0-13.8 11.2-25 25-25s25 11.2 25 25h-5c0-11-9-20-20-20zM50 10c-8.3 0-15 6.7-15 15h-5c0-11 9-20 20-20s20 9 20 20h-5c0-8.3-6.7-15-15-15zM50 15c-5.5 0-10 4.5-10 10h-5c0-8.3 6.7-15 15-15s15 6.7 15 15h-5c0-5.5-4.5-10-10-10z"></path>
-                </svg>
-            </div>
-            <p>University of Pretoria</p>
+            <!-- --- Removed University Logo --- -->
+            <!-- --- Removed University Text --- -->
             <p>&copy; 2025 Dr. Oscar Eybers. All Rights Reserved.</p>
-            <a href="#" class="footer-link">Privacy Policy</a>
+            <!-- --- Updated Footer Links --- -->
+            <div class="footer-links">
+                <a href="#" class="footer-top-link">Top</a>
+                <a href="https://oeybers-cpu.github.io/a_lit_models/" class="footer-home-link">Home</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+            </div>
+            <!-- --- End of Updated Footer Links --- -->
         </div>
     </div>
 
@@ -892,6 +943,16 @@
                     contactForm.reset();
                 });
             }
+
+            // --- Add functionality for the "Top" link ---
+            const topLink = document.querySelector('.footer-top-link');
+            if (topLink) {
+                topLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+             // --- End of "Top" link functionality ---
         });
     </script>
 </body>
